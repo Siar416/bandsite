@@ -1,29 +1,15 @@
 @use "partials/mixins" as *;
+@use "partials/fonts" as *;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $primary-font-family;
 }
 
 $mobile-size: 767px;
 $primary-font: Avenir;
-
-// .main-nav {
-//   min-width: 320px;
-//   max-width: 767px;
-//   background-color: #323232;
-//   height: 80px;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// .logo {
-//   display: block;
-//   margin: 0 auto;
-//   padding-top: 15px;
-//   display: flex;
-// }
 
 .main-nav {
   @include mobile-screen {
@@ -47,7 +33,7 @@ $primary-font: Avenir;
 }
 
 .navbar {
-  font-family: $primary-font;
+  font-family: $primary-font-family;
   color: #ffffff;
   display: flex;
   justify-content: space-around;
@@ -67,23 +53,72 @@ $primary-font: Avenir;
   display: flex;
   align-items: center;
   padding-left: 16px;
+  padding-right: 16px;
 
   &__text {
-    padding-left: 16px;
+    @include page-header-font;
     color: #ffffff;
-    font-family: $primary-font;
-    font-size: 24px;
   }
 }
 
-.about-secton {
+.about-section {
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
-}
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 24px;
 
   &__text {
-    padding-top: 24px;
+    @include page-header-font;
+    padding-bottom: 16px;
+  }
+}
+
+.about__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-section__sub {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+
+  &-text {
+    @include subheader-font;
+    padding-bottom: 16px;
+  }
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &__title {
+    @include subheader-font;
+    padding-bottom: 16px;
+  }
+
+  &__body {
+    @include body-font;
+    padding-bottom: 16px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &__header {
+    padding-bottom: 16px;
+  }
+
+  &__section {
     padding-bottom: 16px;
   }
 
