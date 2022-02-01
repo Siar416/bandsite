@@ -1,5 +1,36 @@
+$mobile-size: 767px;
+@use "partials/mixins" as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+header {
+  @include mobile-screen {
+    background-color: #323232;
+    width: 100vw;
+    height: 80px;
+    margin: auto;
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.navbar {
+  font-family: Avenir;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-top: 15px;
+}
+
+.hero {
+  background-image: url(/assets/images/hero-bio.jpg);
 }
