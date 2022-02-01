@@ -98,9 +98,7 @@ $primary-font: Avenir;
   padding-right: 16px;
 
   &__title {
-    // @include subheader-font;
-    font-family: "avenir";
-    font-weight: "600";
+    @include subheader-font;
     padding-bottom: 16px;
   }
 
@@ -117,6 +115,7 @@ $primary-font: Avenir;
   padding-right: 16px;
 
   &__header {
+    @include page-header-font;
     padding-bottom: 16px;
   }
 

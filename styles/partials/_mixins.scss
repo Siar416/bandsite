@@ -5,17 +5,21 @@
 }
 
 @mixin page-header-font {
+  font-family: "avenir-bold";
+  line-height: 32px;
   font-size: 24px;
   font-weight: 700;
 }
 
 @mixin subheader-font {
+  font-family: "avenir-demi";
   font-size: 14px;
   line-height: 22px;
   font-weight: 600;
 }
 
 @mixin body-font {
+  font-family: "avenir-demi";
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
