@@ -130,6 +130,26 @@ $primary-font: Avenir;
   }
 }
 
+.footer {
+  background-color: #323232;
+}
+
 .socials__text {
   @include page-header-font;
+  color: #ffffff;
+  padding-top: 24px;
+  padding-left: 16px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials__img {
+  padding-left: 16px;
+  padding-top: 24px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 45%;
 }
