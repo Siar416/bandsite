@@ -39,13 +39,34 @@
 }
 
 .navbar {
-  font-family: "avenir";
-  color: #ffffff;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 100%;
+  position: relative;
+}
+.navbar__links {
+  font-family: "avenir-demi";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navbar .navbar__links:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 6px;
+  z-index: 999;
+}
+.navbar .navbar__links:hover:after {
+  width: 50%;
 }
 
 .hero-image {

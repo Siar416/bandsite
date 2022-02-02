@@ -33,13 +33,43 @@ $primary-font: Avenir;
 }
 
 .navbar {
-  font-family: $primary-font-family;
-  color: #ffffff;
+  // @include subheader-font;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   padding-top: 15px;
   padding-bottom: 15px;
+  width: 100%;
+  position: relative;
+
+  &__links {
+    @include subheader-font;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .navbar__links:after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 6px;
+    z-index: 999;
+  }
+
+  .navbar__links:hover:after {
+    width: 50%;
+  }
+
+  // trying to add the unline on active links
+  // &__links--active:hover {
+  //   text-decoration: underline;
+  //   text-decoration-thickness: 2px;
+  //   text-underline-offset: 13px;
+  //   text-decoration-color: #ffffff;
+  // }
 }
 
 .hero-image {
