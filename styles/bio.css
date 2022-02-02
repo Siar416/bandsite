@@ -130,6 +130,8 @@
   flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
+  padding-top: 24px;
+  background-color: #fafafa;
 }
 .gallery__header {
   font-family: "avenir-bold";
@@ -176,16 +178,31 @@
 }
 
 .contacts {
-  font-family: "avenir-regular";
-  font-size: 13px;
-  line-height: 18px;
-  font-weight: 400;
   padding-left: 16px;
   padding-top: 24px;
   display: flex;
   flex-direction: column;
 }
-.contacts__info {
+.contacts__section {
   padding-bottom: 16px;
+}
+.contacts__info {
+  font-family: "avenir-regular";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.footer-logo {
+  padding-left: 16px;
+  padding-top: 48px;
+}
+.footer-logo__text {
+  font-family: "avenir-regular";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding-top: 16px;
   color: #ffffff;
 }/*# sourceMappingURL=bio.css.map */
