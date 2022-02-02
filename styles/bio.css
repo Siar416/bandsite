@@ -173,4 +173,19 @@
   display: inline-flex;
   justify-content: space-between;
   width: 45%;
+}
+
+.contacts {
+  font-family: "avenir-regular";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding-left: 16px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.contacts__info {
+  padding-bottom: 16px;
+  color: #ffffff;
 }/*# sourceMappingURL=bio.css.map */

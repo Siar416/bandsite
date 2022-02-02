@@ -24,3 +24,10 @@
   line-height: 18px;
   font-weight: 400;
 }
+
+@mixin footer-font {
+  font-family: "avenir-regular";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
