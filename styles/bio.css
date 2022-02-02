@@ -37,6 +37,16 @@
     padding-left: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main-nav {
+    background-color: #323232;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 36px;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .logo {
@@ -59,6 +69,13 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .navbar {
     justify-content: space-around;
+    width: 40%;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar {
+    justify-content: space-around;
     width: 30%;
     margin-left: 50px;
   }
@@ -71,6 +88,14 @@
   color: #ffffff;
   text-decoration: none;
   position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .navbar__links {
+    font-family: "avenir-bold";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
 }
 .navbar .navbar__links--active:after {
   content: "";
@@ -98,12 +123,34 @@
   padding-left: 16px;
   padding-right: 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero-image {
+    padding-left: 36px;
+    height: 50vh;
+  }
+}
 .hero-image__text {
   font-family: "avenir-bold";
-  line-height: 32px;
   font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero-image__text {
+    font-family: "avenir-bold";
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 .about-section {
@@ -113,12 +160,24 @@
   padding-right: 16px;
   padding-top: 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-section {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 48px;
+  }
+}
 .about-section__text {
-  font-family: "avenir-bold";
-  line-height: 32px;
-  font-size: 24px;
-  font-weight: 700;
   padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-section__text {
+    font-family: "avenir-bold";
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-bottom: 36px;
+  }
 }
 
 .about__img {
@@ -127,11 +186,26 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about__img {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+  }
+}
 
 .about-section__sub {
   display: flex;
   flex-direction: column;
   padding-top: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about-section__sub {
+    padding-top: 0;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+  }
 }
 .about-section__sub-text {
   font-family: "avenir-demi";
@@ -139,6 +213,14 @@
   line-height: 22px;
   font-weight: 600;
   padding-bottom: 16px;
+}
+.about-section__sub-text {
+  font-family: "avenir-bold";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 .bio {
@@ -172,8 +254,8 @@
 }
 .gallery__header {
   font-family: "avenir-bold";
-  line-height: 32px;
   font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
   padding-bottom: 16px;
 }
@@ -193,8 +275,8 @@
 
 .socials__text {
   font-family: "avenir-bold";
-  line-height: 32px;
   font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
   color: #ffffff;
   padding-top: 24px;
