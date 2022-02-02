@@ -27,6 +27,16 @@
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .main-nav {
+    background-color: #323232;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 36px;
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .logo {
@@ -45,7 +55,13 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
-  position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .navbar {
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 50px;
+  }
 }
 .navbar__links {
   font-family: "avenir-demi";
@@ -54,19 +70,19 @@
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;
+  position: relative;
 }
-.navbar .navbar__links:after {
+.navbar .navbar__links--active:after {
   content: "";
   position: absolute;
   background-color: #ffffff;
   height: 3px;
   width: 0;
-  left: 0;
-  bottom: 6px;
-  z-index: 999;
+  left: 0px;
+  bottom: 0px;
 }
-.navbar .navbar__links:hover:after {
-  width: 50%;
+.navbar .navbar__links--active:hover:after {
+  width: 100%;
 }
 
 .hero-image {

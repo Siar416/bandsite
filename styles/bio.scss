@@ -20,6 +20,16 @@ $primary-font: Avenir;
     display: flex;
     flex-direction: column;
   }
+  @include tablet-screen {
+    background-color: #323232;
+    // min-width: 320px;
+    // max-width: 767px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 36px;
+  }
 }
 
 .logo {
@@ -40,36 +50,34 @@ $primary-font: Avenir;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
-  position: relative;
+
+  @include tablet-screen {
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 50px;
+  }
 
   &__links {
     @include subheader-font;
     color: #ffffff;
     text-decoration: none;
+    position: relative;
   }
 
-  .navbar__links:after {
+  .navbar__links--active:after {
     content: "";
     position: absolute;
     background-color: #ffffff;
     height: 3px;
     width: 0;
-    left: 0;
-    bottom: 6px;
-    z-index: 999;
+    left: 0px;
+    bottom: 0px;
+    // z-index: 999;
   }
 
-  .navbar__links:hover:after {
-    width: 50%;
+  .navbar__links--active:hover:after {
+    width: 100%;
   }
-
-  // trying to add the unline on active links
-  // &__links--active:hover {
-  //   text-decoration: underline;
-  //   text-decoration-thickness: 2px;
-  //   text-underline-offset: 13px;
-  //   text-decoration-color: #ffffff;
-  // }
 }
 
 .hero-image {
