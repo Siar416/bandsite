@@ -162,6 +162,12 @@
     padding-top: 48px;
   }
 
+  @include desktop-screen {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 48px;
+  }
+
   &__text {
     @include subheader-font-tablet-desktop;
     padding-bottom: 16px;
@@ -169,6 +175,13 @@
 
   &__text {
     @include tablet-screen {
+      @include page-section-header-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
+  }
+
+  &__text {
+    @include desktop-screen {
       @include page-section-header-font-tablet-desktop;
       padding-bottom: 36px;
     }
@@ -184,6 +197,13 @@
     padding-left: 36px;
     padding-right: 36px;
     padding-bottom: 36px;
+  }
+
+  @include desktop-screen {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 36px;
+    height: 70vh;
   }
 }
 
@@ -211,6 +231,15 @@
       padding-right: 36px;
     }
   }
+
+  &-text {
+    @include desktop-screen {
+      @include subheader-font-tablet-desktop;
+      padding-left: 80px;
+      padding-right: 80px;
+      width: 75%;
+    }
+  }
 }
 
 .bio {
@@ -223,6 +252,13 @@
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 36px;
+  }
+
+  @include desktop-screen {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 36px;
+    padding-top: 32px;
   }
 
   &__title {
@@ -378,7 +414,7 @@
     padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 30vh;
+    height: 28vh;
     padding-top: 48px;
   }
 
