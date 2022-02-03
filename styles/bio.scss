@@ -189,9 +189,11 @@ $primary-font: Avenir;
   }
 
   &-text {
-    @include subheader-font-tablet-desktop;
-    padding-left: 36px;
-    padding-right: 36px;
+    @include tablet-screen {
+      @include subheader-font-tablet-desktop;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
   }
 }
 
@@ -201,14 +203,46 @@ $primary-font: Avenir;
   padding-left: 16px;
   padding-right: 16px;
 
+  @include tablet-screen {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 36px;
+  }
+
   &__title {
     @include subheader-font-mobile;
     padding-bottom: 16px;
   }
 
+  &__title {
+    @include tablet-screen {
+      @include subheader-font-tablet-desktop;
+      padding-left: 36px;
+    }
+  }
+
   &__body {
     @include body-font-mobile;
     padding-bottom: 16px;
+  }
+
+  &__body {
+    @include tablet-screen {
+      @include body-font-tablet-desktop;
+      margin: 0 16px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.bio__container {
+  @include tablet-screen {
+    display: flex;
+  }
+
+  @include tablet-screen {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -220,19 +254,51 @@ $primary-font: Avenir;
   padding-top: 24px;
   background-color: #fafafa;
 
+  @include tablet-screen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 48px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+  }
+
   &__header {
     @include page-header-font-mobile;
     padding-bottom: 16px;
+  }
+
+  &__header {
+    @include tablet-screen {
+      @include page-section-header-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
   }
 
   &__section {
     padding-bottom: 16px;
   }
 
+  &__section {
+    @include tablet-screen {
+      width: 33%;
+      height: auto;
+      font-size: 0;
+      padding: 0px;
+    }
+  }
+
   &__img {
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  &__img {
+    @include tablet-screen {
+      padding: 16px;
+    }
   }
 }
 
