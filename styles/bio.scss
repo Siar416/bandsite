@@ -87,7 +87,6 @@ $primary-font: Avenir;
     width: 0;
     left: 0px;
     bottom: 0px;
-    // z-index: 999;
   }
 
   .navbar__links--active:hover:after {
@@ -96,12 +95,13 @@ $primary-font: Avenir;
 }
 
 .hero-image {
-  background-image: url(/assets/images/hero-bio.jpg);
+  // background-image: url(/assets/images/hero-bio.jpg);
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url(/assets/images/hero-bio.jpg);
   height: 25vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
-  // background-size: cover;
   background-size: cover;
   position: relative;
   display: flex;
