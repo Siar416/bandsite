@@ -8,14 +8,14 @@
   font-family: $primary-font-family;
 }
 
-$mobile-size: 767px;
-$primary-font: Avenir;
+// $mobile-size: 767px;
+// $primary-font: Avenir;
 
 .main-nav {
   @include mobile-screen {
     background-color: #323232;
-    min-width: 320px;
-    max-width: 767px;
+    // min-width: 320px;
+    // max-width: 767px;
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,8 @@ $primary-font: Avenir;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 36px;
+    padding-left: 80px;
+    // padding-left: 36px;
   }
 }
 
@@ -78,6 +79,10 @@ $primary-font: Avenir;
     @include tablet-screen {
       @include subheader-font-tablet-desktop;
     }
+
+    @include desktop-screen {
+      @include subheader-font-tablet-desktop;
+    }
   }
   .navbar__links--active:after {
     content: "";
@@ -95,7 +100,6 @@ $primary-font: Avenir;
 }
 
 .hero-image {
-  // background-image: url(/assets/images/hero-bio.jpg);
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url(/assets/images/hero-bio.jpg);
   height: 25vh;
@@ -111,7 +115,12 @@ $primary-font: Avenir;
 
   @include tablet-screen {
     padding-left: 36px;
-    height: 50vh;
+    height: 60vh;
+  }
+
+  @include desktop-screen {
+    padding-left: 80px;
+    height: 80vh;
   }
 
   &__text {
@@ -123,6 +132,12 @@ $primary-font: Avenir;
     @include tablet-screen {
       @include page-header-font-tablet-desktop;
       color: #ffffff;
+    }
+  }
+
+  &__text {
+    @include desktop-screen {
+      @include page-header-font-tablet-desktop;
     }
   }
 }
@@ -148,6 +163,7 @@ $primary-font: Avenir;
   }
 
   &__text {
+    @include subheader-font-tablet-desktop;
     padding-bottom: 16px;
   }
 

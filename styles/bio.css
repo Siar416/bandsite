@@ -20,8 +20,6 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-nav {
     background-color: #323232;
-    min-width: 320px;
-    max-width: 767px;
     height: 80px;
     display: flex;
     flex-direction: column;
@@ -44,7 +42,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 36px;
+    padding-left: 80px;
   }
 }
 
@@ -97,6 +95,14 @@
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1280px) {
+  .navbar__links {
+    font-family: "avenir-demi";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
 .navbar .navbar__links--active:after {
   content: "";
   position: absolute;
@@ -126,7 +132,13 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-image {
     padding-left: 36px;
-    height: 50vh;
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    padding-left: 80px;
+    height: 80vh;
   }
 }
 .hero-image__text {
@@ -143,6 +155,14 @@
     line-height: 68px;
     font-weight: 700;
     color: #ffffff;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-image__text {
+    font-family: "avenir-bold";
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
   }
 }
 
@@ -168,6 +188,10 @@
   }
 }
 .about-section__text {
+  font-family: "avenir-demi";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
