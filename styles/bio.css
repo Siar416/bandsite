@@ -316,7 +316,10 @@
     font-size: 36px;
     line-height: 44px;
     font-weight: 700;
-    padding-bottom: 36px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    display: inline-block;
+    width: 100%;
   }
 }
 .gallery__section {
@@ -345,6 +348,12 @@
 .footer {
   background-color: #323232;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    padding: 48px;
+    position: relative;
+  }
+}
 
 .socials__text {
   font-family: "avenir-bold";
@@ -355,10 +364,27 @@
   padding-top: 24px;
   padding-left: 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .socials__text {
+    font-family: "avenir-bold";
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-top: 0;
+    padding-left: 0;
+  }
+}
 
 .socials {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .socials {
+    flex-direction: row;
+    align-items: baseline;
+    position: relative;
+  }
 }
 
 .socials__img {
@@ -368,12 +394,28 @@
   justify-content: space-between;
   width: 45%;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .socials__img {
+    justify-content: space-around;
+    width: 25%;
+    height: auto;
+  }
+}
 
 .contacts {
   padding-left: 16px;
   padding-top: 24px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .contacts {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30vh;
+    padding-top: 48px;
+  }
 }
 .contacts__section {
   padding-bottom: 16px;
@@ -385,10 +427,23 @@
   font-weight: 400;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .contacts__info {
+    font-family: "avenir-regular";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
 
 .footer-logo {
   padding-left: 16px;
   padding-top: 48px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer-logo {
+    padding: 0px;
+  }
 }
 .footer-logo__text {
   font-family: "avenir-regular";
@@ -397,4 +452,21 @@
   font-weight: 400;
   padding-top: 16px;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer-logo__text {
+    font-family: "avenir-regular";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-top: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer-logo__img {
+    position: absolute;
+    top: 75px;
+    right: 48px;
+  }
 }/*# sourceMappingURL=bio.css.map */

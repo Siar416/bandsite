@@ -272,7 +272,10 @@ $primary-font: Avenir;
   &__header {
     @include tablet-screen {
       @include page-section-header-font-tablet-desktop;
-      padding-bottom: 36px;
+      padding-bottom: 20px;
+      padding-left: 16px;
+      display: inline-block;
+      width: 100%;
     }
   }
 
@@ -304,6 +307,11 @@ $primary-font: Avenir;
 
 .footer {
   background-color: #323232;
+
+  @include tablet-screen {
+    padding: 48px;
+    position: relative;
+  }
 }
 
 .socials__text {
@@ -311,11 +319,23 @@ $primary-font: Avenir;
   color: #ffffff;
   padding-top: 24px;
   padding-left: 16px;
+
+  @include tablet-screen {
+    @include page-section-header-font-tablet-desktop;
+    padding-top: 0;
+    padding-left: 0;
+  }
 }
 
 .socials {
   display: flex;
   flex-direction: column;
+
+  @include tablet-screen {
+    flex-direction: row;
+    align-items: baseline;
+    position: relative;
+  }
 }
 
 .socials__img {
@@ -324,14 +344,27 @@ $primary-font: Avenir;
   display: inline-flex;
   justify-content: space-between;
   width: 45%;
+
+  @include tablet-screen {
+    justify-content: space-around;
+    width: 25%;
+    height: auto;
+  }
 }
 
 .contacts {
-  // @include footer-font;
   padding-left: 16px;
   padding-top: 24px;
   display: flex;
   flex-direction: column;
+
+  @include tablet-screen {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30vh;
+    padding-top: 48px;
+  }
 
   &__section {
     padding-bottom: 16px;
@@ -341,15 +374,40 @@ $primary-font: Avenir;
     @include footer-font-mobile;
     color: #ffffff;
   }
+
+  &__info {
+    @include tablet-screen {
+      @include footer-font-tablet-desktop;
+    }
+  }
 }
 
 .footer-logo {
   padding-left: 16px;
   padding-top: 48px;
 
+  @include tablet-screen {
+    padding: 0px;
+  }
+
   &__text {
     @include footer-font-mobile;
     padding-top: 16px;
     color: #ffffff;
+  }
+
+  &__text {
+    @include tablet-screen {
+      @include footer-font-tablet-desktop;
+      padding-top: 36px;
+    }
+  }
+}
+
+.footer-logo__img {
+  @include tablet-screen {
+    position: absolute;
+    top: 75px;
+    right: 48px;
   }
 }
