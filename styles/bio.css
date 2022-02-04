@@ -1,10 +1,10 @@
 @font-face {
   font-family: "avenir-regular";
-  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "avenir-demi";
-  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
 }
 @font-face {
   font-family: "avenir-bold";
@@ -118,7 +118,7 @@
 
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/images/hero-bio.jpg);
-  height: 25vh;
+  height: 35vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,7 +138,7 @@
 @media screen and (min-width: 1280px) {
   .hero-image {
     padding-left: 80px;
-    height: 80vh;
+    height: 90vh;
   }
 }
 .hero-image__text {
@@ -321,6 +321,14 @@
     padding-left: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .bio__title {
+    font-family: "avenir-demi";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+}
 .bio__body {
   font-family: "avenir-regular";
   font-size: 13px;
@@ -329,6 +337,16 @@
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .bio__body {
+    font-family: "avenir-regular";
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0 16px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
   .bio__body {
     font-family: "avenir-regular";
     font-size: 14px;
@@ -348,6 +366,11 @@
   .bio__container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio__container {
+    display: flex;
   }
 }
 
@@ -370,6 +393,15 @@
     padding-bottom: 36px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding-left: 80px;
+    padding-right: 80px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 36px;
+  }
+}
 .gallery__header {
   font-family: "avenir-bold";
   font-size: 24px;
@@ -378,6 +410,18 @@
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__header {
+    font-family: "avenir-bold";
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    display: inline-block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
   .gallery__header {
     font-family: "avenir-bold";
     font-size: 36px;
@@ -400,6 +444,14 @@
     padding: 0px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .gallery__section {
+    width: 33%;
+    height: auto;
+    font-size: 0;
+    padding: 0px;
+  }
+}
 .gallery__img {
   width: 100%;
   height: auto;
@@ -407,6 +459,11 @@
      object-fit: cover;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__img {
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
   .gallery__img {
     padding: 16px;
   }

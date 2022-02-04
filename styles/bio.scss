@@ -102,7 +102,7 @@
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url(/assets/images/hero-bio.jpg);
-  height: 25vh;
+  height: 35vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@
 
   @include desktop-screen {
     padding-left: 80px;
-    height: 80vh;
+    height: 90vh;
   }
 
   &__text {
@@ -273,6 +273,12 @@
     }
   }
 
+  &__title {
+    @include desktop-screen {
+      @include subheader-font-tablet-desktop;
+    }
+  }
+
   &__body {
     @include body-font-mobile;
     padding-bottom: 16px;
@@ -280,6 +286,14 @@
 
   &__body {
     @include tablet-screen {
+      @include body-font-tablet-desktop;
+      margin: 0 16px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__body {
+    @include desktop-screen {
       @include body-font-tablet-desktop;
       margin: 0 16px;
       padding-bottom: 0;
@@ -295,6 +309,10 @@
   @include tablet-screen {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  @include desktop-screen {
+    display: flex;
   }
 }
 
@@ -316,6 +334,14 @@
     padding-bottom: 36px;
   }
 
+  @include desktop-screen {
+    padding-left: 80px;
+    padding-right: 80px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 36px;
+  }
+
   &__header {
     @include page-header-font-mobile;
     padding-bottom: 16px;
@@ -323,6 +349,16 @@
 
   &__header {
     @include tablet-screen {
+      @include page-section-header-font-tablet-desktop;
+      padding-bottom: 20px;
+      padding-left: 16px;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  &__header {
+    @include desktop-screen {
       @include page-section-header-font-tablet-desktop;
       padding-bottom: 20px;
       padding-left: 16px;
@@ -344,6 +380,15 @@
     }
   }
 
+  &__section {
+    @include desktop-screen {
+      width: 33%;
+      height: auto;
+      font-size: 0;
+      padding: 0px;
+    }
+  }
+
   &__img {
     width: 100%;
     height: auto;
@@ -352,6 +397,12 @@
 
   &__img {
     @include tablet-screen {
+      padding: 16px;
+    }
+  }
+
+  &__img {
+    @include desktop-screen {
       padding: 16px;
     }
   }
