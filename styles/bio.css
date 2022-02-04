@@ -111,13 +111,46 @@
   left: 0;
   bottom: 6px;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: #ffffff;
   z-index: 999;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .bio-section--active::before {
+    content: "";
+    position: absolute;
+    left: 11%;
+    bottom: -9px;
+    width: 0;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section--active::before {
+    position: absolute;
+    left: 12%;
+    bottom: -9px;
+    width: 0;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
 }
 
 .bio-section--active:hover::before {
   width: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .bio-section--active:hover::before {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-section--active:hover::before {
+    width: 31%;
+  }
 }
 
 .shows-section--active::before {
@@ -130,9 +163,43 @@
   background-color: #ffffff;
   z-index: 999;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows-section--active::before {
+    content: "";
+    position: absolute;
+    right: 9%;
+    bottom: -9px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-section--active::before {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: -9px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+}
 
 .shows-section--active:hover::before {
   width: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows-section--active:hover::before {
+    width: 24%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-section--active:hover::before {
+    width: 20%;
+  }
 }
 
 .hero-image {

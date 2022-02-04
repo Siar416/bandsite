@@ -82,21 +82,48 @@
   }
 }
 
-// try start
-
 .bio-section--active::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 6px;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: #ffffff;
   z-index: 999;
+
+  @include tablet-screen {
+    content: "";
+    position: absolute;
+    left: 11%;
+    bottom: -9px;
+    width: 0;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+
+  @include desktop-screen {
+    position: absolute;
+    left: 12%;
+    bottom: -9px;
+    width: 0;
+    height: 4px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
 }
 
 .bio-section--active:hover::before {
   width: 50%;
+
+  @include tablet-screen {
+    width: 35%;
+  }
+
+  @include desktop-screen {
+    width: 31%;
+  }
 }
 
 .shows-section--active::before {
@@ -108,42 +135,41 @@
   height: 3px;
   background-color: #ffffff;
   z-index: 999;
+
+  @include tablet-screen {
+    content: "";
+    position: absolute;
+    right: 9%;
+    bottom: -9px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+
+  @include desktop-screen {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: -9px;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 999;
+  }
 }
 
 .shows-section--active:hover::before {
   width: 50%;
+
+  @include tablet-screen {
+    width: 24%;
+  }
+
+  @include desktop-screen {
+    width: 20%;
+  }
 }
-
-// .navbar::before {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   bottom: 6px;
-//   width: 0;
-//   height: 5px;
-//   background-color: green;
-//   z-index: 999;
-// }
-
-// .navbar:hover::before {
-//   width: 50%;
-// }
-
-// try end
-
-// trying to add the underline .navbar__links--active:after {
-//   content: "";
-//   position: absolute;
-//   background-color: #ffffff;
-//   height: 3px;
-//   width: 0;
-//   left: 0px;
-//   bottom: 0px;
-// }
-
-// .navbar__links--active:hover:after {
-//   width: 100%;
-// }
 
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
