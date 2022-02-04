@@ -8,17 +8,13 @@
   font-family: $primary-font-family;
 }
 
-// $mobile-size: 767px;
-// $primary-font: Avenir;
-
 .main-nav {
   @include mobile-screen {
     background-color: #323232;
-    // min-width: 320px;
-    // max-width: 767px;
     height: 80px;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   @include tablet-screen {
     background-color: #323232;
@@ -56,7 +52,7 @@
   list-style-type: none;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 100%;
+  position: relative;
 
   @include tablet-screen {
     justify-content: space-around;
@@ -84,25 +80,75 @@
       @include subheader-font-tablet-desktop;
     }
   }
-  .navbar__links--active:after {
-    content: "";
-    position: absolute;
-    background-color: #ffffff;
-    height: 3px;
-    width: 0;
-    left: 0px;
-    bottom: 0px;
-  }
-
-  .navbar__links--active:hover:after {
-    width: 100%;
-  }
 }
+
+// try start
+
+.bio-section--active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.bio-section--active:hover::before {
+  width: 50%;
+}
+
+.shows-section--active::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.shows-section--active:hover::before {
+  width: 50%;
+}
+
+// .navbar::before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   bottom: 6px;
+//   width: 0;
+//   height: 5px;
+//   background-color: green;
+//   z-index: 999;
+// }
+
+// .navbar:hover::before {
+//   width: 50%;
+// }
+
+// try end
+
+// trying to add the underline .navbar__links--active:after {
+//   content: "";
+//   position: absolute;
+//   background-color: #ffffff;
+//   height: 3px;
+//   width: 0;
+//   left: 0px;
+//   bottom: 0px;
+// }
+
+// .navbar__links--active:hover:after {
+//   width: 100%;
+// }
 
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url(/assets/images/hero-bio.jpg);
-  height: 35vh;
+  height: 30vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
