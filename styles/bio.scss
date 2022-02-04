@@ -376,7 +376,7 @@
       width: 33%;
       height: auto;
       font-size: 0;
-      padding: 0px;
+      padding: 16px;
     }
   }
 
@@ -385,7 +385,7 @@
       width: 33%;
       height: auto;
       font-size: 0;
-      padding: 0px;
+      padding: 16px;
     }
   }
 
@@ -395,17 +395,17 @@
     object-fit: cover;
   }
 
-  &__img {
-    @include tablet-screen {
-      padding: 16px;
-    }
-  }
+  // &__img {
+  //   @include tablet-screen {
+  //     // padding: 16px;
+  //   }
+  // }
 
-  &__img {
-    @include desktop-screen {
-      padding: 16px;
-    }
-  }
+  // &__img {
+  //   @include desktop-screen {
+  //     // padding: 16px;
+  //   }
+  // }
 }
 
 .footer {
@@ -413,6 +413,11 @@
 
   @include tablet-screen {
     padding: 48px;
+    position: relative;
+  }
+
+  @include desktop-screen {
+    padding: 36px 80px;
     position: relative;
   }
 }
@@ -428,6 +433,10 @@
     padding-top: 0;
     padding-left: 0;
   }
+
+  @include desktop-screen {
+    @include page-section-header-font-tablet-desktop;
+  }
 }
 
 .socials {
@@ -435,6 +444,12 @@
   flex-direction: column;
 
   @include tablet-screen {
+    flex-direction: row;
+    align-items: baseline;
+    position: relative;
+  }
+
+  @include desktop-screen {
     flex-direction: row;
     align-items: baseline;
     position: relative;
@@ -453,6 +468,12 @@
     width: 25%;
     height: auto;
   }
+
+  @include desktop-screen {
+    justify-content: space-around;
+    width: 20%;
+    height: auto;
+  }
 }
 
 .contacts {
@@ -469,6 +490,15 @@
     padding-top: 48px;
   }
 
+  @include desktop-screen {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 22vh;
+    padding-top: 36px;
+    padding-left: 16px;
+  }
+
   &__section {
     padding-bottom: 16px;
   }
@@ -480,6 +510,12 @@
 
   &__info {
     @include tablet-screen {
+      @include footer-font-tablet-desktop;
+    }
+  }
+
+  &__info {
+    @include desktop-screen {
       @include footer-font-tablet-desktop;
     }
   }
@@ -505,12 +541,24 @@
       padding-top: 36px;
     }
   }
+
+  &__text {
+    @include desktop-screen {
+      @include footer-font-tablet-desktop;
+    }
+  }
 }
 
 .footer-logo__img {
   @include tablet-screen {
     position: absolute;
     top: 75px;
-    right: 48px;
+    right: 65px;
+  }
+
+  @include desktop-screen {
+    position: absolute;
+    top: 70px;
+    right: 110px;
   }
 }
