@@ -442,6 +442,7 @@ table {
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio {
