@@ -94,7 +94,7 @@
     margin-left: 3.125rem;
 
     &__section {
-      width: 30%;
+      width: 35%;
       border-bottom: 0.3125rem solid transparent;
     }
 
@@ -502,6 +502,10 @@
     flex-wrap: wrap;
     height: 28vh;
     padding-top: 3rem;
+
+    &__grouping {
+      flex-wrap: nowrap;
+    }
   }
 
   @include desktop-screen {
@@ -511,6 +515,11 @@
     height: 22vh;
     padding-top: 2.25rem;
     padding-left: 1rem;
+    max-width: 60%;
+
+    &__grouping {
+      flex-wrap: nowrap;
+    }
   }
 
   &__section {
@@ -519,18 +528,20 @@
 
   &__info {
     @include footer-font-mobile;
-    color: $white;
+    color: $mercury;
   }
 
   &__info {
     @include tablet-screen {
       @include footer-font-tablet-desktop;
+      color: $mercury;
     }
   }
 
   &__info {
     @include desktop-screen {
       @include footer-font-tablet-desktop;
+      color: $mercury;
     }
   }
 }

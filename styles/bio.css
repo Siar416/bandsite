@@ -232,7 +232,7 @@ table {
     margin-left: 3.125rem;
   }
   .navbar__section {
-    width: 30%;
+    width: 35%;
     border-bottom: 0.3125rem solid transparent;
   }
   .navbar__section--active:hover {
@@ -712,6 +712,9 @@ table {
     height: 28vh;
     padding-top: 3rem;
   }
+  .contacts__grouping {
+    flex-wrap: nowrap;
+  }
 }
 @media screen and (min-width: 1280px) {
   .contacts {
@@ -721,6 +724,10 @@ table {
     height: 22vh;
     padding-top: 2.25rem;
     padding-left: 1rem;
+    max-width: 60%;
+  }
+  .contacts__grouping {
+    flex-wrap: nowrap;
   }
 }
 .contacts__section {
@@ -731,7 +738,7 @@ table {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-  color: #ffffff;
+  color: #e1e1e1;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts__info {
@@ -739,6 +746,7 @@ table {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+    color: #e1e1e1;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -747,6 +755,7 @@ table {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+    color: #e1e1e1;
   }
 }
 
