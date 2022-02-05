@@ -85,6 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -141,13 +142,6 @@ table {
   font-family: "avenir-bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "avenir";
-}
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-nav {
     background-color: #323232;
@@ -511,8 +505,8 @@ table {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    margin: 0 1rem;
     padding-bottom: 0;
+    padding-right: 2rem;
   }
 }
 
