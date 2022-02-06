@@ -162,9 +162,7 @@ table {
     flex-direction: row;
     padding-left: 2.25rem;
     align-content: stretch;
-    padding-top: 1.5625rem;
     align-items: baseline;
-    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -173,10 +171,8 @@ table {
     height: 5rem;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     padding-left: 5rem;
-    padding-top: 1.75rem;
-    margin: 0 auto;
+    align-items: stretch;
     align-items: baseline;
   }
 }
@@ -197,6 +193,18 @@ table {
   list-style-type: none;
   position: relative;
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .navbar {
+    height: 100%;
+    padding-top: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar {
+    height: 100%;
+    padding-top: 1.25rem;
+  }
 }
 .navbar__section {
   text-align: center;

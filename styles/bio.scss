@@ -18,9 +18,7 @@
     flex-direction: row;
     padding-left: 2.25rem;
     align-content: stretch;
-    padding-top: 1.5625rem;
     align-items: baseline;
-    padding-bottom: 1rem;
   }
 
   @include desktop-screen {
@@ -28,10 +26,8 @@
     height: 5rem;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     padding-left: 5rem;
-    padding-top: 1.75rem;
-    margin: 0 auto;
+    align-items: stretch;
     align-items: baseline;
   }
 }
@@ -52,6 +48,16 @@
   list-style-type: none;
   position: relative;
   width: 100%;
+
+  @include tablet-screen {
+    height: 100%;
+    padding-top: 1.25rem;
+  }
+
+  @include desktop-screen {
+    height: 100%;
+    padding-top: 1.25rem;
+  }
 
   &__section {
     text-align: center;
