@@ -296,7 +296,7 @@ table {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-image {
     padding-left: 2.25rem;
-    height: 60vh;
+    height: 75vh;
   }
 }
 @media screen and (min-width: 1280px) {
