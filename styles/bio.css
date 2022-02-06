@@ -282,7 +282,7 @@ table {
 
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/images/hero-bio.jpg);
-  height: 40vh;
+  height: 30vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -444,7 +444,7 @@ table {
     font-weight: 600;
     padding-left: 5rem;
     padding-right: 5rem;
-    width: 75%;
+    width: 78%;
   }
 }
 
