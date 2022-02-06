@@ -133,14 +133,17 @@ table {
 @font-face {
   font-family: "avenir-regular";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
 }
 @font-face {
   font-family: "avenir-demi";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("opentype");
 }
 @font-face {
   font-family: "avenir-bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("opentype");
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-nav {
@@ -629,6 +632,31 @@ table {
     position: relative;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__reposition {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__reposition {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__reposition {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__reposition__img {
+    padding-right: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__reposition__img {
+    padding-right: 2.25rem;
+  }
+}
 
 .socials__text {
   font-family: "avenir-bold";
@@ -667,6 +695,7 @@ table {
     flex-direction: row;
     align-items: baseline;
     position: relative;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -674,6 +703,7 @@ table {
     flex-direction: row;
     align-items: baseline;
     position: relative;
+    width: 100%;
   }
 }
 
@@ -769,6 +799,16 @@ table {
     padding: 0rem;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer-logo__img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-logo__img {
+    display: none;
+  }
+}
 .footer-logo__text {
   font-family: "avenir-regular";
   font-size: 0.8125rem;
@@ -792,20 +832,5 @@ table {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .footer-logo__img {
-    position: absolute;
-    top: 4.6875rem;
-    right: 4.0625rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer-logo__img {
-    position: absolute;
-    top: 4.375rem;
-    right: 6.875rem;
   }
 }/*# sourceMappingURL=bio.css.map */

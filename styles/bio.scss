@@ -435,6 +435,30 @@
     padding: 2.25rem 5rem;
     position: relative;
   }
+
+  &__reposition {
+    @include mobile-screen {
+      display: none;
+    }
+
+    @include tablet-screen {
+      display: flex;
+    }
+
+    @include desktop-screen {
+      display: flex;
+    }
+  }
+
+  &__reposition__img {
+    @include tablet-screen {
+      padding-right: 1rem;
+    }
+
+    @include desktop-screen {
+      padding-right: 2.25rem;
+    }
+  }
 }
 
 .socials__text {
@@ -462,12 +486,14 @@
     flex-direction: row;
     align-items: baseline;
     position: relative;
+    width: 100%;
   }
 
   @include desktop-screen {
     flex-direction: row;
     align-items: baseline;
     position: relative;
+    width: 100%;
   }
 }
 
@@ -555,6 +581,16 @@
     padding: 0rem;
   }
 
+  &__img {
+    @include tablet-screen {
+      display: none;
+    }
+
+    @include desktop-screen {
+      display: none;
+    }
+  }
+
   &__text {
     @include footer-font-mobile;
     padding-top: 1rem;
@@ -575,16 +611,16 @@
   }
 }
 
-.footer-logo__img {
-  @include tablet-screen {
-    position: absolute;
-    top: 4.6875rem;
-    right: 4.0625rem;
-  }
+// .footer-logo__img {
+//   @include tablet-screen {
+//     position: absolute;
+//     top: 4.6875rem;
+//     right: 4.0625rem;
+//   }
 
-  @include desktop-screen {
-    position: absolute;
-    top: 4.375rem;
-    right: 6.875rem;
-  }
-}
+//   @include desktop-screen {
+//     position: absolute;
+//     top: 4.375rem;
+//     right: 6.875rem;
+//   }
+// }
