@@ -83,7 +83,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: inherit, "sans-serif";
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -282,7 +282,7 @@ table {
 
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/images/hero-bio.jpg);
-  height: 30vh;
+  height: 18vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,19 +290,19 @@ table {
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-image {
     padding-left: 2.25rem;
-    height: 75vh;
+    padding-right: 0;
+    height: 45vh;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero-image {
     padding-left: 5rem;
-    height: 90vh;
+    height: 73vh;
   }
 }
 .hero-image__text {
@@ -332,30 +332,23 @@ table {
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding: 0 2.25rem;
   }
 }
 
 .about-section {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1rem 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about-section {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-top: 3rem;
+    padding: 3rem 2.5rem 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .about-section {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 3rem;
+    padding: 3rem 5rem 0;
   }
 }
 .about-section__text {
@@ -392,16 +385,12 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__img {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 0 2.25rem 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__img {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 2.25rem;
+    padding: 0 5rem 2.25rem;
     height: 70vh;
   }
 }
@@ -413,10 +402,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about-section__sub {
-    padding-top: 0;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 0 2.25rem 2.25rem;
   }
 }
 .about-section__sub-text {
@@ -432,8 +418,7 @@ table {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding: 0 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -442,8 +427,7 @@ table {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 0 5rem;
     width: 78%;
   }
 }
@@ -451,23 +435,16 @@ table {
 .bio {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 2.25rem;
+    padding: 0 5rem 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .bio {
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-bottom: 2.25rem;
-    padding-top: 2rem;
+    padding: 2rem 10rem 2.25rem;
   }
 }
 .bio__title {
@@ -529,8 +506,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio__container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -542,9 +518,7 @@ table {
 .gallery {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1rem 0;
   background-color: #fafafa;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -552,20 +526,14 @@ table {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 3rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .gallery {
-    padding-left: 5rem;
-    padding-right: 5rem;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 2.25rem;
-    padding-top: 2.25rem;
+    padding: 2.25rem 5rem;
   }
 }
 .gallery__header {
@@ -632,6 +600,7 @@ table {
   .footer {
     padding: 3rem;
     position: relative;
+    padding-bottom: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -748,7 +717,7 @@ table {
     padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 28vh;
+    height: 15vh;
     padding-top: 3rem;
   }
   .contacts__grouping {
@@ -760,7 +729,7 @@ table {
     padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 22vh;
+    height: 15vh;
     padding-top: 2.25rem;
     padding-left: 1rem;
     max-width: 60%;
@@ -797,15 +766,20 @@ table {
     color: #e1e1e1;
   }
 }
+.contacts__info--active {
+  color: #ffffff;
+}
 
 .footer-logo {
   padding-left: 1rem;
-  padding-top: 3rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer-logo {
     padding: 0rem;
   }
+}
+.footer-logo__img {
+  padding-top: 3rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer-logo__img {
@@ -822,7 +796,7 @@ table {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  padding-top: 1rem;
+  padding: 1rem 0;
   color: #ffffff;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -831,7 +805,7 @@ table {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
-    padding-top: 2.25rem;
+    padding-top: 3rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -840,5 +814,6 @@ table {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
+    padding-top: 3rem;
   }
 }/*# sourceMappingURL=bio.css.map */

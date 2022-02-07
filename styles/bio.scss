@@ -133,7 +133,7 @@
 .hero-image {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url(/assets/images/hero-bio.jpg);
-  height: 30vh;
+  height: 18vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -141,17 +141,17 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 
   @include tablet-screen {
     padding-left: 2.25rem;
-    height: 75vh;
+    padding-right: 0;
+    height: 45vh;
   }
 
   @include desktop-screen {
     padding-left: 5rem;
-    height: 90vh;
+    height: 73vh;
   }
 
   &__text {
@@ -175,28 +175,21 @@
 
 .about {
   @include tablet-screen {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding: 0 2.25rem;
   }
 }
 
 .about-section {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1rem 0;
 
   @include tablet-screen {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-top: 3rem;
+    padding: 3rem 2.5rem 0;
   }
 
   @include desktop-screen {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 3rem;
+    padding: 3rem 5rem 0;
   }
 
   &__text {
@@ -225,15 +218,11 @@
   object-fit: cover;
 
   @include tablet-screen {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 0 2.25rem 2.25rem;
   }
 
   @include desktop-screen {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 2.25rem;
+    padding: 0 5rem 2.25rem;
     height: 70vh;
   }
 }
@@ -244,10 +233,7 @@
   padding-top: 1rem;
 
   @include tablet-screen {
-    padding-top: 0;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 0 2.25rem 2.25rem;
   }
 
   &-text {
@@ -258,16 +244,14 @@
   &-text {
     @include tablet-screen {
       @include subheader-font-tablet-desktop;
-      padding-left: 2.25rem;
-      padding-right: 2.25rem;
+      padding: 0 2.25rem;
     }
   }
 
   &-text {
     @include desktop-screen {
       @include subheader-font-tablet-desktop;
-      padding-left: 5rem;
-      padding-right: 5rem;
+      padding: 0 5rem;
       width: 78%;
     }
   }
@@ -276,21 +260,14 @@
 .bio {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem;
 
   @include tablet-screen {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 2.25rem;
+    padding: 0 5rem 2.25rem;
   }
 
   @include desktop-screen {
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-bottom: 2.25rem;
-    padding-top: 2rem;
+    padding: 2rem 10rem 2.25rem;
   }
 
   &__title {
@@ -339,8 +316,7 @@
   }
 
   @include tablet-screen {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 1.25rem;
   }
 
   @include desktop-screen {
@@ -351,28 +327,20 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
+  padding: 1.5rem 1rem 0;
   background-color: $alabaster;
 
   @include tablet-screen {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 3rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding: 3rem 2.25rem 2.25rem;
   }
 
   @include desktop-screen {
-    padding-left: 5rem;
-    padding-right: 5rem;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 2.25rem;
-    padding-top: 2.25rem;
+    padding: 2.25rem 5rem;
   }
 
   &__header {
@@ -435,6 +403,7 @@
   @include tablet-screen {
     padding: 3rem;
     position: relative;
+    padding-bottom: 2.25rem;
   }
 
   @include desktop-screen {
@@ -533,7 +502,7 @@
     padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 28vh;
+    height: 15vh;
     padding-top: 3rem;
 
     &__grouping {
@@ -545,7 +514,7 @@
     padding: 0;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 22vh;
+    height: 15vh;
     padding-top: 2.25rem;
     padding-left: 1rem;
     max-width: 60%;
@@ -577,17 +546,22 @@
       color: $mercury;
     }
   }
+
+  &__info--active {
+    color: $white;
+  }
 }
 
 .footer-logo {
   padding-left: 1rem;
-  padding-top: 3rem;
 
   @include tablet-screen {
     padding: 0rem;
   }
 
   &__img {
+    padding-top: 3rem;
+
     @include tablet-screen {
       display: none;
     }
@@ -599,20 +573,21 @@
 
   &__text {
     @include footer-font-mobile;
-    padding-top: 1rem;
+    padding: 1rem 0;
     color: $white;
   }
 
   &__text {
     @include tablet-screen {
       @include footer-font-tablet-desktop;
-      padding-top: 2.25rem;
+      padding-top: 3rem;
     }
   }
 
   &__text {
     @include desktop-screen {
       @include footer-font-tablet-desktop;
+      padding-top: 3rem;
     }
   }
 }
