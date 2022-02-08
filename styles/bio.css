@@ -702,6 +702,114 @@ table {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .comments {
     background-color: #ffffff;
+    padding: 80px 80px;
+    margin-bottom: 36px;
+  }
+  .comments__header {
+    font-family: "avenir-bold";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+  .comments__input {
+    font-family: "avenir-demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: green;
+  }
+  .comments__avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 36px;
+  }
+  .comments__info {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .comments__info__input-name {
+    height: 48px;
+    width: 99%;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    border-radius: 4px;
+    resize: none;
+  }
+  .comments__info__input-comments {
+    width: 99%;
+    height: 100px;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    border-radius: 4px;
+    resize: none;
+  }
+  .comments ::-moz-placeholder {
+    padding: 10px;
+  }
+  .comments :-ms-input-placeholder {
+    padding: 10px;
+  }
+  .comments ::placeholder {
+    padding: 10px;
+  }
+  .comments__submit-button {
+    font-family: "avenir-demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    height: 40px;
+    width: 150px;
+    margin-left: auto;
+    border-radius: 4px;
+    border: none;
+    background-color: #323232;
+    color: red;
+  }
+
+  .comments-added {
+    font-family: "avenir-demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    display: flex;
+    padding-top: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .comments-added__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .comments-added__body {
+    padding-top: 16px;
+  }
+
+  .comments-added__date {
+    margin-left: auto;
+  }
+
+  .comments-added__avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #e1e1e1;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    background-color: #ffffff;
     padding: 48px 48px;
     margin-bottom: 36px;
   }
@@ -738,7 +846,6 @@ table {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 400;
-    width: 100%;
     display: flex;
     flex-direction: column;
   }
