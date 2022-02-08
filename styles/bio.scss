@@ -397,10 +397,12 @@
   }
 }
 
+// comments section started
+
 @include mobile-screen {
   .comments {
     background-color: $white;
-    padding: 0 16px;
+    padding: 16px 16px;
     margin-bottom: 36px;
 
     &__header {
@@ -415,11 +417,12 @@
       justify-content: noraml;
       border-bottom: 1px solid $mercury;
       padding-bottom: 16px;
+      padding-top: 16px;
     }
 
-    &__photo {
-      height: 40px;
-      width: 40px;
+    &__avatar {
+      height: 36px;
+      width: 36px;
       border-radius: 50%;
       margin-right: 20px;
       margin-top: 20px;
@@ -435,7 +438,7 @@
       width: 99%;
       border: 1px solid $mercury;
       outline: none;
-      border-radius: 5px;
+      border-radius: 4px;
       resize: none;
     }
 
@@ -443,12 +446,54 @@
       width: 99%;
       border: 1px solid $mercury;
       outline: none;
-      border-radius: 5px;
+      border-radius: 4px;
       resize: none;
     }
     ::placeholder {
       padding: 10px;
     }
+
+    &__submit-button {
+      @include page-header-font-mobile;
+      height: 40px;
+      width: 100%;
+      padding: 5px 32px;
+      border-radius: 4px;
+      border: none;
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .comments-added {
+    @include subheader-font-mobile;
+    display: flex;
+    padding-top: 16px;
+
+    &__section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    &__body {
+      padding-top: 16px;
+    }
+  }
+
+  .comments-added__date {
+    margin-left: auto;
+  }
+
+  .comments-added__avatar {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: green;
+    display: inline-block;
   }
 }
 
