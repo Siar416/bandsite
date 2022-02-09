@@ -803,6 +803,7 @@
   display: inline-flex;
   justify-content: space-between;
   width: 45%;
+  height: auto;
 
   @include tablet-screen {
     justify-content: space-around;

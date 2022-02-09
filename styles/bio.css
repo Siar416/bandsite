@@ -1036,6 +1036,7 @@ table {
   display: inline-flex;
   justify-content: space-between;
   width: 45%;
+  height: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .socials__img {

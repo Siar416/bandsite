@@ -1,0 +1,66 @@
+@use "partials/reset" as *;
+@use "partials/mixins" as *;
+@use "partials/fonts" as *;
+@use "partials/_colors" as *;
+
+.hero-image-shows {
+  background-image: linear-gradient(
+      rgba(50, 50, 50, 0.5),
+      rgba(50, 50, 50, 0.5)
+    ),
+    url(../assets/images/hero-shows.jpg);
+  height: 18vh;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  @include tablet-screen {
+    padding-left: 2.25rem;
+    padding-right: 0;
+    height: 45vh;
+  }
+
+  @include desktop-screen {
+    padding-left: 5rem;
+    height: 73vh;
+  }
+}
+
+.hero-image-shows {
+  display: flex;
+  align-items: flex-start;
+
+  @include desktop-screen {
+    align-items: center;
+  }
+}
+
+.hero-image__text {
+  @include tablet-screen {
+    width: 80%;
+  }
+  @include desktop-screen {
+    width: 65%;
+  }
+}
+
+.hero-image__text-header {
+  @include subheader-font-mobile;
+  padding-top: 36px;
+  padding-bottom: 24px;
+
+  @include tablet-screen {
+    @include subheader-font-tablet-desktop;
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  @include desktop-screen {
+    @include subheader-font-tablet-desktop;
+  }
+}
