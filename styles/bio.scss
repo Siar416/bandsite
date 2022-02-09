@@ -403,7 +403,6 @@
   .comments {
     background-color: $white;
     padding: 16px 16px;
-    margin-bottom: 36px;
 
     &__header {
       @include page-header-font-mobile;
@@ -414,7 +413,7 @@
       display: flex;
       color: $mercury;
       display: flex;
-      justify-content: noraml;
+      // justify-content: noraml;
       border-bottom: 1px solid $mercury;
       padding-bottom: 16px;
       padding-top: 16px;
@@ -470,6 +469,8 @@
     @include subheader-font-mobile;
     display: flex;
     padding-top: 16px;
+    border-bottom: 1px solid $mercury;
+    padding-bottom: 16px;
 
     &__section {
       display: flex;
@@ -512,16 +513,19 @@
 
     &__input {
       @include subheader-font-tablet-desktop;
+      display: flex;
+      justify-content: center;
       color: green;
-      // display: flex;
-      // color: $mercury;
-      // display: flex;
-      // justify-content: noraml;
+      display: flex;
+      justify-content: center;
+      color: $mercury;
+      display: flex;
+      justify-content: noraml;
       // border-bottom: 1px solid $mercury;
-      // padding-bottom: 16px;
-      // padding-top: 16px;
-      // padding-left: 36px;
-      // padding-right: 36px;
+      padding-bottom: 16px;
+      padding-top: 16px;
+      padding-left: 36px;
+      padding-right: 36px;
     }
 
     &__avatar {
@@ -587,6 +591,8 @@
       align-items: center;
       width: 100%;
       flex-wrap: wrap;
+      border-top: 1px solid $mercury;
+      padding-top: 16px;
     }
     &__body {
       padding-top: 16px;
@@ -604,6 +610,7 @@
     margin-right: 20px;
     background-color: $mercury;
     display: inline-block;
+    margin-top: 22px;
   }
 }
 
@@ -611,7 +618,7 @@
 @include desktop-screen {
   .comments {
     background-color: $white;
-    padding: 48px 48px;
+    padding: 80px 80px;
     margin-bottom: 36px;
 
     &__header {
@@ -622,8 +629,8 @@
       display: flex;
       color: $mercury;
       display: flex;
-      justify-content: noraml;
-      border-bottom: 1px solid $mercury;
+      justify-content: center;
+      // border-bottom: 1px solid $mercury;
       padding-bottom: 16px;
       padding-top: 16px;
       padding-left: 36px;
@@ -639,7 +646,7 @@
 
     &__info {
       @include body-font-tablet-desktop;
-      // width: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
     }
@@ -686,12 +693,16 @@
     padding-left: 36px;
     padding-right: 36px;
 
+    width: 60%;
+    margin: auto;
+
     &__section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       flex-wrap: wrap;
+      border-top: 1px solid $mercury;
     }
     &__body {
       padding-top: 16px;
