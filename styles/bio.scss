@@ -468,8 +468,7 @@
   .comments-added {
     @include subheader-font-mobile;
     display: flex;
-    padding-top: 16px;
-    border-bottom: 1px solid $mercury;
+    flex-direction: column;
     padding-bottom: 16px;
 
     &__section {
@@ -478,15 +477,20 @@
       align-items: center;
       width: 100%;
       flex-wrap: wrap;
+      border-bottom: 1px solid $mercury;
+      padding-top: 16px;
     }
 
     &__body {
       padding-top: 16px;
+      padding-left: 56px;
+      padding-bottom: 16px;
     }
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: $mercury;
   }
 
   .comments-added__avatar {
@@ -504,8 +508,7 @@
 @include tablet-screen {
   .comments {
     background-color: $white;
-    padding: 80px 80px;
-    margin-bottom: 36px;
+    padding: 80px 80px 36px 80px;
 
     &__header {
       @include page-header-font-tablet-desktop;
@@ -573,17 +576,19 @@
       border-radius: 4px;
       border: none;
       background-color: $black;
-      // color: $white;
-      color: red;
+      color: $white;
+      margin-top: 15px;
     }
   }
 
   .comments-added {
     @include subheader-font-mobile;
     display: flex;
+    flex-direction: column;
     padding-top: 16px;
-    padding-left: 36px;
-    padding-right: 36px;
+    border-bottom: 1px solid $mercury;
+    // padding-left: 36px;
+    // padding-right: 36px;
 
     &__section {
       display: flex;
@@ -592,15 +597,16 @@
       width: 100%;
       flex-wrap: wrap;
       border-top: 1px solid $mercury;
-      padding-top: 16px;
+      padding-bottom: 16px;
     }
     &__body {
-      padding-top: 16px;
+      padding-left: 67px;
     }
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: $mercury;
   }
 
   .comments-added__avatar {
@@ -681,14 +687,14 @@
       border-radius: 4px;
       border: none;
       background-color: $black;
-      // color: $white;
-      color: red;
+      color: $white;
     }
   }
 
   .comments-added {
     @include subheader-font-mobile;
     display: flex;
+    flex-direction: column;
     padding-top: 16px;
     padding-left: 36px;
     padding-right: 36px;
@@ -703,14 +709,17 @@
       width: 100%;
       flex-wrap: wrap;
       border-top: 1px solid $mercury;
+      padding-bottom: 16px;
     }
     &__body {
       padding-top: 16px;
+      padding-left: 67px;
     }
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: $mercury;
   }
   .comments-added__avatar {
     height: 48px;
@@ -719,6 +728,7 @@
     margin-right: 20px;
     background-color: $mercury;
     display: inline-block;
+    margin-top: 22px;
   }
 }
 

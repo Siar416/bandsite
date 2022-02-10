@@ -671,8 +671,7 @@ table {
     line-height: 1.375rem;
     font-weight: 600;
     display: flex;
-    padding-top: 16px;
-    border-bottom: 1px solid #e1e1e1;
+    flex-direction: column;
     padding-bottom: 16px;
   }
   .comments-added__section {
@@ -681,13 +680,18 @@ table {
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 16px;
   }
   .comments-added__body {
     padding-top: 16px;
+    padding-left: 56px;
+    padding-bottom: 16px;
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: #e1e1e1;
   }
 
   .comments-added__avatar {
@@ -702,8 +706,7 @@ table {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .comments {
     background-color: #ffffff;
-    padding: 80px 80px;
-    margin-bottom: 36px;
+    padding: 80px 80px 36px 80px;
   }
   .comments__header {
     font-family: "avenir-bold";
@@ -781,7 +784,8 @@ table {
     border-radius: 4px;
     border: none;
     background-color: #323232;
-    color: red;
+    color: #ffffff;
+    margin-top: 15px;
   }
 
   .comments-added {
@@ -790,9 +794,9 @@ table {
     line-height: 1.375rem;
     font-weight: 600;
     display: flex;
+    flex-direction: column;
     padding-top: 16px;
-    padding-left: 36px;
-    padding-right: 36px;
+    border-bottom: 1px solid #e1e1e1;
   }
   .comments-added__section {
     display: flex;
@@ -801,14 +805,15 @@ table {
     width: 100%;
     flex-wrap: wrap;
     border-top: 1px solid #e1e1e1;
-    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .comments-added__body {
-    padding-top: 16px;
+    padding-left: 67px;
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: #e1e1e1;
   }
 
   .comments-added__avatar {
@@ -899,7 +904,7 @@ table {
     border-radius: 4px;
     border: none;
     background-color: #323232;
-    color: red;
+    color: #ffffff;
   }
 
   .comments-added {
@@ -908,6 +913,7 @@ table {
     line-height: 1.375rem;
     font-weight: 600;
     display: flex;
+    flex-direction: column;
     padding-top: 16px;
     padding-left: 36px;
     padding-right: 36px;
@@ -921,13 +927,16 @@ table {
     width: 100%;
     flex-wrap: wrap;
     border-top: 1px solid #e1e1e1;
+    padding-bottom: 16px;
   }
   .comments-added__body {
     padding-top: 16px;
+    padding-left: 67px;
   }
 
   .comments-added__date {
     margin-left: auto;
+    color: #e1e1e1;
   }
 
   .comments-added__avatar {
@@ -937,6 +946,7 @@ table {
     margin-right: 20px;
     background-color: #e1e1e1;
     display: inline-block;
+    margin-top: 22px;
   }
 }
 .footer {

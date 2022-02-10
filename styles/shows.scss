@@ -9,7 +9,7 @@
       rgba(50, 50, 50, 0.5)
     ),
     url(../assets/images/hero-shows.jpg);
-  height: 18vh;
+  height: 25vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,6 +41,8 @@
 }
 
 .hero-image__text {
+  width: 80%;
+
   @include tablet-screen {
     width: 80%;
   }
@@ -62,5 +64,67 @@
 
   @include desktop-screen {
     @include subheader-font-tablet-desktop;
+  }
+}
+
+.shows {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid $mercury;
+
+  @include tablet-screen {
+    padding-left: 36px;
+    padding-right: 36px;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid green;
+      align-items: center;
+      align-items: flex-end;
+    }
+  }
+
+  @include desktop-screen {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  &__list__date {
+    @include subheader-font-mobile;
+    padding-bottom: 16px;
+  }
+
+  &__list__date-header {
+    @include subheader-font-mobile;
+    color: $mercury;
+
+    @include tablet-screen {
+      padding-bottom: 36px;
+    }
+  }
+}
+
+.shows__title {
+  @include page-header-font-mobile;
+  @include page-section-header-font-tablet-desktop;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.btn {
+  @include section-header-font-mobile;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: $black;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+
+  @include tablet-screen {
+    @include subheader-font-tablet-desktop;
+    width: auto;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
