@@ -73,44 +73,86 @@ let commentArray = [
         }
     })();
 
-    
+    let date = new Date();
+
+    // shorten date
+    let newDate = date.toLocaleDateString('en-US');
   
-let submit = document.querySelector('.comments__submit-button');
-   
+const mainForm = document.getElementById('mainForm');
 
-    submit.addEventListener('click', (e) => {
-        e.preventDefault();
+mainForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formInput = {};
 
-    let formComments = {};
+    formInput.name = e.target.name.value;
+    formInput.time = newDate;
+    formInput.comment = e.target.comment.value;
+    // console.log(formInput);
 
-    formComments.name = e.target.name.value;
-    // formComments.comment = e.target.comment.value;
+    commentArray.push(formInput);
+})
 
-    let comments = document.querySelector(".comments-added");
-    let divContainer = document.createElement('div');
-    divContainer.classList.add('comments-added__section');
-    comments.appendChild(divContainer);
 
-    let image = document.createElement('img');
-    image.classList.add('comments-added__avatar');
-    divContainer.appendChild(image);
 
-    let name = document.createElement('p');
-    name.innerText = formComments.name;
-    name.classList.add('comments-added__name');
-    divContainer.appendChild(name);
 
-    // dont have a way to get time from form
-    // let time = document.createElement('p');
-    // time.innerText = commentArray[key].time;
-    // time.classList.add('comments-added__date');
-    // divContainer.appendChild(time);
 
-    let actualComment = document.createElement('p');
-    actualComment.innerText = formComments.comment;
-    actualComment.classList.add('comments-added__body');
-    divContainer.appendChild(actualComment);
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     submit.addEventListener('submit', (e) => {
+//         e.preventDefault();
+
+//     let formComments = {};
+
+//     formComments.name = e.target.name.value;
+//     // formComments.comment = e.target.comment.value;
+
+//     let comments = document.querySelector(".comments-added");
+//     let divContainer = document.createElement('div');
+//     divContainer.classList.add('comments-added__section');
+//     comments.appendChild(divContainer);
+
+//     let image = document.createElement('img');
+//     image.classList.add('comments-added__avatar');
+//     divContainer.appendChild(image);
+
+//     let name = document.createElement('p');
+//     name.innerText = formComments.name;
+//     name.classList.add('comments-added__name');
+//     divContainer.appendChild(name);
+
+//     // dont have a way to get time from form
+//     // let time = document.createElement('p');
+//     // time.innerText = commentArray[key].time;
+//     // time.classList.add('comments-added__date');
+//     // divContainer.appendChild(time);
+
+//     let actualComment = document.createElement('p');
+//     actualComment.innerText = formComments.comment;
+//     actualComment.classList.add('comments-added__body');
+//     divContainer.appendChild(actualComment);
+// });
  
 
 
@@ -118,83 +160,6 @@ let submit = document.querySelector('.comments__submit-button');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// dont delete below !!!!!!!!!!!!
-
-    // this is the Main DIV
-    // let comments = document.querySelector(".comments-added");
-
-
-
-    // function displayComment() {
-
-    //     //IMG 
-    //     let img = document.createElement('img');
-    //     img.classList.add('comments-added__avatar');
-    //     comments.appendChild(img);
-
-    //     // DIV
-    //     let commentsAddedSection = document.createElement('div');
-    //     commentsAddedSection.classList.add('comments-added__section');
-        
-    //     // NAME
-    //     let commentsAddedName = document.createElement('p');
-    //     commentsAddedName.classList.add('comments-added__name');
-    //     commentsAddedName.innerText = commentArray[0].name;
-
-    //     // P tag for Date
-    //     let div = document.createElement('div');
-    //     let commentsAddedDate = document.createElement('p');
-    //     commentsAddedDate.classList.add('comments-added__date');
-    //     commentsAddedDate.innerText = commentArray[0].time;
-
-    //     // Comments body
-    //     let commentsAddedBody = document.createElement('p');
-    //     commentsAddedBody.classList.add('comments-added__body');
-    //     commentsAddedBody.innerText = commentArray[0].comment;
-        
-
-    //     // appending below
-    //     commentsAddedSection.appendChild(commentsAddedName);    
-    //     div.appendChild(commentsAddedDate);
-    //     comments.appendChild(commentsAddedSection);
-    //     comments.appendChild(commentsAddedDate);
-    //     commentsAddedSection.appendChild(commentsAddedBody);
-      
-    // }
-
-    // displayComment();
 
 
 

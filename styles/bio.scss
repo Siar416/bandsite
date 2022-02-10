@@ -757,10 +757,6 @@
   }
 
   &__reposition {
-    @include mobile-screen {
-      display: none;
-    }
-
     @include tablet-screen {
       display: flex;
     }
@@ -771,6 +767,10 @@
   }
 
   &__reposition__img {
+    @include mobile-screen {
+      display: none;
+    }
+
     @include tablet-screen {
       padding-right: 1rem;
     }

@@ -168,22 +168,23 @@
           alt="image of Mohan"
         />
         <div class="comments__info">
-          <form class="comments__info__input">
+          <form id="mainForm" class="comments__info__input">
             <p>NAME</p>
             <textarea
+              name="name"
               class="comments__info__input-name"
               placeholder="Enter your name"
-              cols="40"
             ></textarea>
             <p>COMMENT</p>
             <textarea
+              name="comment"
+              id="textArea"
               class="comments__info__input-comments"
               placeholder="Add a new comment"
-              cols="10"
-              rows="10"
             ></textarea>
+            <button id="submit" class="comments__submit-button">COMMENT</button>
           </form>
-          <button class="comments__submit-button">COMMENT</button>
+          <!-- <button id="submit" class="comments__submit-button">COMMENT</button> -->
         </div>
       </div>
 

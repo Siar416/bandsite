@@ -973,11 +973,6 @@ table {
     position: relative;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .footer__reposition {
-    display: none;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__reposition {
     display: flex;
@@ -986,6 +981,11 @@ table {
 @media screen and (min-width: 1280px) {
   .footer__reposition {
     display: flex;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__reposition__img {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
