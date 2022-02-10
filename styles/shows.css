@@ -231,6 +231,7 @@ table {
   .shows {
     padding-left: 36px;
     padding-right: 36px;
+    border-bottom: none;
   }
   .shows__container {
     display: flex;
@@ -238,6 +239,11 @@ table {
     border-bottom: 1px solid #e1e1e1;
     align-items: center;
     align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    border-bottom: none;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -263,6 +269,16 @@ table {
   font-weight: 600;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list__date {
+    padding: 36px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list__date {
+    padding: 36px 0;
+  }
+}
 .shows__list__date-header {
   font-family: "avenir-demi";
   font-size: 0.875rem;
@@ -277,13 +293,11 @@ table {
     line-height: 1.375rem;
     font-weight: 400;
     color: #afafaf;
-    padding-bottom: 36px;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__list__date-header {
     color: #afafaf;
-    padding-bottom: 48px;
   }
 }
 
@@ -306,11 +320,12 @@ table {
   line-height: 2rem;
   font-weight: 700;
   width: 100%;
-  margin-bottom: 16px;
   background-color: #323232;
   color: #ffffff;
   border: none;
   border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .btn {
@@ -321,6 +336,7 @@ table {
     width: auto;
     padding-left: 18px;
     padding-right: 18px;
+    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -328,5 +344,6 @@ table {
     width: auto;
     padding-left: 18px;
     padding-right: 18px;
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=shows.css.map */

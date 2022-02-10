@@ -75,6 +75,7 @@
   @include tablet-screen {
     padding-left: 36px;
     padding-right: 36px;
+    border-bottom: none;
 
     &__container {
       display: flex;
@@ -83,6 +84,10 @@
       align-items: center;
       align-items: flex-end;
     }
+  }
+
+  @include desktop-screen {
+    border-bottom: none;
   }
 
   &__container {
@@ -104,6 +109,14 @@
   &__list__date {
     @include subheader-font-mobile;
     padding-bottom: 16px;
+
+    @include tablet-screen {
+      padding: 36px 0;
+    }
+
+    @include desktop-screen {
+      padding: 36px 0;
+    }
   }
 
   &__list__date-header {
@@ -113,12 +126,12 @@
     @include tablet-screen {
       @include body-font-tablet-desktop;
       color: $silver;
-      padding-bottom: 36px;
+      // padding-bottom: 36px;
     }
 
     @include desktop-screen {
       color: $silver;
-      padding-bottom: 48px;
+      // padding-bottom: 48px;
     }
   }
 }
@@ -130,25 +143,32 @@
   padding-bottom: 36px;
 }
 
+.shows__list {
+  // background-color: green;
+}
+
 .btn {
   @include section-header-font-mobile;
   width: 100%;
-  margin-bottom: 16px;
   background-color: $black;
   color: $white;
   border: none;
   border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px;
 
   @include tablet-screen {
     @include subheader-font-tablet-desktop;
     width: auto;
     padding-left: 18px;
     padding-right: 18px;
+    margin-bottom: 16px;
   }
 
   @include desktop-screen {
     width: auto;
     padding-left: 18px;
     padding-right: 18px;
+    margin-bottom: 0;
   }
 }
