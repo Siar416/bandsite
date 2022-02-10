@@ -79,9 +79,20 @@
     &__container {
       display: flex;
       justify-content: space-between;
-      border-bottom: 2px solid green;
+      border-bottom: 1px solid $mercury;
       align-items: center;
       align-items: flex-end;
+    }
+  }
+
+  &__container {
+    @include desktop-screen {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $mercury;
+      align-items: center;
+      width: 80%;
+      margin-left: auto;
     }
   }
 
@@ -97,10 +108,17 @@
 
   &__list__date-header {
     @include subheader-font-mobile;
-    color: $mercury;
+    color: $silver;
 
     @include tablet-screen {
+      @include body-font-tablet-desktop;
+      color: $silver;
       padding-bottom: 36px;
+    }
+
+    @include desktop-screen {
+      color: $silver;
+      padding-bottom: 48px;
     }
   }
 }
@@ -123,6 +141,12 @@
 
   @include tablet-screen {
     @include subheader-font-tablet-desktop;
+    width: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @include desktop-screen {
     width: auto;
     padding-left: 18px;
     padding-right: 18px;

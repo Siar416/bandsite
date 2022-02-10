@@ -235,9 +235,19 @@ table {
   .shows__container {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid green;
+    border-bottom: 1px solid #e1e1e1;
     align-items: center;
     align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -258,11 +268,22 @@ table {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  color: #e1e1e1;
+  color: #afafaf;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__list__date-header {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #afafaf;
     padding-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list__date-header {
+    color: #afafaf;
+    padding-bottom: 48px;
   }
 }
 
@@ -297,6 +318,13 @@ table {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
+    width: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .btn {
     width: auto;
     padding-left: 18px;
     padding-right: 18px;

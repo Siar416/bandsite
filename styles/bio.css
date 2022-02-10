@@ -787,6 +787,10 @@ table {
     color: #ffffff;
     margin-top: 15px;
   }
+  .comments__submit-button:hover {
+    cursor: pointer;
+    background-color: #000000;
+  }
 
   .comments-added {
     font-family: "avenir-demi";
@@ -905,6 +909,10 @@ table {
     border: none;
     background-color: #323232;
     color: #ffffff;
+  }
+  .comments__submit-button:hover {
+    cursor: pointer;
+    background-color: #000000;
   }
 
   .comments-added {

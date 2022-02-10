@@ -578,6 +578,11 @@
       background-color: $black;
       color: $white;
       margin-top: 15px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $drk-black;
+      }
     }
   }
 
@@ -688,6 +693,11 @@
       border: none;
       background-color: $black;
       color: $white;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $drk-black;
+      }
     }
   }
 
