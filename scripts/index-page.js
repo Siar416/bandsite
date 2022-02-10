@@ -17,26 +17,17 @@ let commentArray = [
 ];
 
 
-    //     <img class="comments-added__avatar" /> done
-    //   <div class="comments-added__section">
-    //       <p class="comments-added__name">Connor Walton</p>
-    //     <div>
-    //         <p class="comments-added__date">02/17/2021</p>
-    //     </div>
-    //       <p class="comments-added__body">
-    //         This is art. This is inexplicable magic expressed in the purest way,
-    //         everything that makes up this majestic work deserves reverence. Let
-    //         us appreciate this for what it is and what it contains.
-    //       </p>
-    //   </div>
+
    
 
 // trying a loop below
 // --reminder-- need to change let into const - most secure to less secure
 
-    (function displayComment() {
+let comments = document.querySelector(".comments-added");
 
-    let comments = document.querySelector(".comments-added");
+    function displayComment() {
+
+    
 
     for(let key in commentArray) {
 
@@ -50,37 +41,46 @@ let commentArray = [
     image.classList.add('comments-added__avatar');
     divContainer.appendChild(image);
 
+
     // name
     let name = document.createElement('p');
     name.innerText = commentArray[key].name;
     name.classList.add('comments-added__name');
     divContainer.appendChild(name);
+    
 
     // date/time
     let time = document.createElement('p');
     time.innerText = commentArray[key].time;
     time.classList.add('comments-added__date');
     divContainer.appendChild(time);
+    
 
     // comment body
     let actualComment = document.createElement('p');
     actualComment.innerText = commentArray[key].comment;
     actualComment.classList.add('comments-added__body');
     divContainer.appendChild(actualComment);
-
+    
 
     comments.appendChild(divContainer);
+    
         }
-    })();
+    }
+    displayComment();
 
-    let date = new Date();
 
     // shorten date
+    let date = new Date();
     let newDate = date.toLocaleDateString('en-US');
   
-const mainForm = document.getElementById('mainForm');
+    const mainForm = document.getElementById('mainForm');
 
-mainForm.addEventListener('submit', (e) => {
+
+
+
+    // form submit
+    mainForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const formInput = {};
@@ -90,7 +90,56 @@ mainForm.addEventListener('submit', (e) => {
     formInput.comment = e.target.comment.value;
     // console.log(formInput);
 
-    commentArray.push(formInput);
+     // this is the main container
+    let divContainer = document.createElement('div');
+    divContainer.classList.add('comments-added__section');
+    comments.appendChild(divContainer);
+
+    // image of avatar
+    let image = document.createElement('img');
+    image.classList.add('comments-added__avatar');
+    divContainer.appendChild(image);
+
+ 
+
+
+
+    // name
+    let name = document.createElement('p');
+    name.innerText = formInput.name;
+    name.classList.add('comments-added__name');
+    divContainer.appendChild(name);
+    
+
+    // date/time
+    let time = document.createElement('p');
+    time.innerText = newDate;
+    time.classList.add('comments-added__date');
+    divContainer.appendChild(time);
+    
+
+
+    // comment body
+    let actualComment = document.createElement('p');
+    actualComment.innerText = formInput.comment;
+    actualComment.classList.add('comments-added__body');
+    divContainer.appendChild(actualComment);
+    
+
+
+
+    comments.appendChild(divContainer);
+    
+    comments.insertBefore(divContainer, comments.childNodes[0]);
+
+
+
+    // reset the form
+    e.target.name.value = '';
+    e.target.comment.value = '';
+
+    // commentArray.push(formInput);
+//    displayComment();
 })
 
 
