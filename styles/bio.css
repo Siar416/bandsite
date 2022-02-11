@@ -598,6 +598,10 @@ table {
     background-color: #ffffff;
     padding: 16px 16px;
   }
+  .comments__div {
+    display: flex;
+    width: 100%;
+  }
   .comments__header {
     font-family: "avenir-bold";
     font-size: 1.5rem;
@@ -610,7 +614,7 @@ table {
     line-height: 1.375rem;
     font-weight: 600;
     display: flex;
-    color: #e1e1e1;
+    color: #afafaf;
     display: flex;
     border-bottom: 1px solid #e1e1e1;
     padding-bottom: 16px;
@@ -621,7 +625,7 @@ table {
     width: 36px;
     border-radius: 50%;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 27px;
   }
   .comments__info {
     width: 100%;
@@ -633,6 +637,32 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+  .comments ::-moz-placeholder {
+    font-family: "avenir-demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    color: #323232;
+    padding: 10px;
+  }
+  .comments :-ms-input-placeholder {
+    font-family: "avenir-demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    color: #323232;
+    padding: 10px;
+  }
+  .comments ::placeholder {
+    font-family: "avenir-demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    color: #323232;
+    padding: 10px;
   }
   .comments__info__input-comments {
     width: 99%;
@@ -641,15 +671,7 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
-  }
-  .comments ::-moz-placeholder {
-    padding: 10px;
-  }
-  .comments :-ms-input-placeholder {
-    padding: 10px;
-  }
-  .comments ::placeholder {
-    padding: 10px;
+    margin-top: 4px;
   }
   .comments__submit-button {
     font-family: "avenir-bold";
@@ -663,6 +685,7 @@ table {
     border: none;
     background-color: #323232;
     color: #ffffff;
+    margin: 16px 0;
   }
 
   .comments-added {
@@ -672,25 +695,24 @@ table {
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    padding-bottom: 16px;
   }
   .comments-added__section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
     border-bottom: 1px solid #e1e1e1;
     padding-top: 16px;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .comments-added__body {
     padding-left: 56px;
     padding-bottom: 16px;
   }
-
   .comments-added__date {
     margin-left: auto;
-    color: #e1e1e1;
+    color: #afafaf;
   }
 
   .comments-added__avatar {
@@ -707,6 +729,12 @@ table {
     background-color: #ffffff;
     padding: 80px 80px 36px 80px;
   }
+  .comments__div {
+    display: flex;
+    width: 100%;
+    padding-top: 36px;
+    height: 70px;
+  }
   .comments__header {
     font-family: "avenir-bold";
     font-size: 3.75rem;
@@ -720,10 +748,9 @@ table {
     font-weight: 600;
     display: flex;
     justify-content: center;
-    color: green;
     display: flex;
     justify-content: center;
-    color: #e1e1e1;
+    color: #afafaf;
     display: flex;
     justify-content: noraml;
     padding-bottom: 16px;
@@ -736,7 +763,7 @@ table {
     width: 48px;
     border-radius: 50%;
     margin-right: 20px;
-    margin-top: 36px;
+    margin-top: 22px;
   }
   .comments__info {
     font-family: "avenir-regular";
@@ -754,6 +781,15 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
+    margin-top: 4px;
+    margin-bottom: 16px;
+  }
+  .comments__info__input-name-header {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #afafaf;
   }
   .comments__info__input-comments {
     width: 99%;
@@ -762,29 +798,48 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
+    margin-top: 4px;
   }
   .comments ::-moz-placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
     padding: 10px;
+    color: #323232;
   }
   .comments :-ms-input-placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
     padding: 10px;
+    color: #323232;
   }
   .comments ::placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
     padding: 10px;
+    color: #323232;
   }
   .comments__submit-button {
     font-family: "avenir-demi";
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     height: 40px;
-    width: 150px;
     margin-left: auto;
     border-radius: 4px;
     border: none;
     background-color: #323232;
     color: #ffffff;
-    margin-top: 15px;
+    margin-top: 16px;
+    padding: 0 32px;
   }
   .comments__submit-button:hover {
     cursor: pointer;
@@ -802,6 +857,10 @@ table {
     border-bottom: 1px solid #e1e1e1;
   }
   .comments-added__section {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -811,12 +870,16 @@ table {
     padding-bottom: 16px;
   }
   .comments-added__body {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
     padding-left: 67px;
   }
 
   .comments-added__date {
     margin-left: auto;
-    color: #e1e1e1;
+    color: #afafaf;
   }
 
   .comments-added__avatar {
@@ -826,7 +889,6 @@ table {
     margin-right: 20px;
     background-color: #e1e1e1;
     display: inline-block;
-    margin-top: 22px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -834,6 +896,12 @@ table {
     background-color: #ffffff;
     padding: 80px 80px;
     margin-bottom: 36px;
+  }
+  .comments__div {
+    display: flex;
+    width: 100%;
+    padding-top: 36px;
+    height: 70px;
   }
   .comments__header {
     font-family: "avenir-bold";
@@ -847,7 +915,7 @@ table {
     line-height: 2rem;
     font-weight: 600;
     display: flex;
-    color: #e1e1e1;
+    color: #afafaf;
     display: flex;
     justify-content: center;
     padding-bottom: 16px;
@@ -860,7 +928,7 @@ table {
     width: 48px;
     border-radius: 50%;
     margin-right: 20px;
-    margin-top: 36px;
+    margin-top: 16px;
   }
   .comments__info {
     font-family: "avenir-regular";
@@ -871,6 +939,13 @@ table {
     display: flex;
     flex-direction: column;
   }
+  .comments__info__input-name-header {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: silver;
+  }
   .comments__info__input-name {
     height: 48px;
     width: 99%;
@@ -878,6 +953,8 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
+    margin-top: 4px;
+    margin-bottom: 16px;
   }
   .comments__info__input-comments {
     width: 99%;
@@ -886,14 +963,30 @@ table {
     outline: none;
     border-radius: 4px;
     resize: none;
+    margin-top: 4px;
   }
   .comments ::-moz-placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #323232;
     padding: 10px;
   }
   .comments :-ms-input-placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #323232;
     padding: 10px;
   }
   .comments ::placeholder {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #323232;
     padding: 10px;
   }
   .comments__submit-button {
@@ -901,13 +994,18 @@ table {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: auto;
     height: 40px;
-    width: 150px;
+    margin-top: 16px;
     margin-left: auto;
     border-radius: 4px;
     border: none;
     background-color: #323232;
     color: #ffffff;
+    padding: 0 32px;
   }
   .comments__submit-button:hover {
     cursor: pointer;
@@ -934,6 +1032,7 @@ table {
     width: 100%;
     flex-wrap: wrap;
     border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
     padding-bottom: 16px;
   }
   .comments-added__body {
@@ -952,7 +1051,6 @@ table {
     margin-right: 20px;
     background-color: #e1e1e1;
     display: inline-block;
-    margin-top: 22px;
   }
 }
 .footer {
