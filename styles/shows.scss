@@ -9,7 +9,7 @@
       rgba(50, 50, 50, 0.5)
     ),
     url(../assets/images/hero-shows.jpg);
-  height: 25vh;
+  height: 31vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,11 @@
 
 .hero-image-shows {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+
+  @include tablet-screen {
+    padding-right: 36px;
+  }
 
   @include desktop-screen {
     align-items: center;
@@ -41,14 +45,21 @@
 }
 
 .hero-image__text {
-  width: 80%;
+  width: 85%;
+  margin-bottom: 16px;
 
   @include tablet-screen {
     width: 80%;
   }
   @include desktop-screen {
-    width: 65%;
+    // width: 65%;
+    display: flex;
+    flex-direction: column;
   }
+}
+
+.soundCloud {
+  width: 200px;
 }
 
 .hero-image__text-header {

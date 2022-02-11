@@ -147,7 +147,7 @@ table {
 }
 .hero-image-shows {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg);
-  height: 25vh;
+  height: 31vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,7 +173,12 @@ table {
 
 .hero-image-shows {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero-image-shows {
+    padding-right: 36px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero-image-shows {
@@ -182,7 +187,8 @@ table {
 }
 
 .hero-image__text {
-  width: 80%;
+  width: 85%;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-image__text {
@@ -191,8 +197,13 @@ table {
 }
 @media screen and (min-width: 1280px) {
   .hero-image__text {
-    width: 65%;
+    display: flex;
+    flex-direction: column;
   }
+}
+
+.soundCloud {
+  width: 200px;
 }
 
 .hero-image__text-header {
