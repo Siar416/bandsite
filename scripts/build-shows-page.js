@@ -43,12 +43,6 @@ shows.classList.add('shows');
 showsWrapper.appendChild(shows);
 
 
-/// this will be static
-// const showsTitle = document.createElement('h2');
-// showsTitle.classList.add('shows__title', 'shows__title--hidden');
-// showsTitle.innerText = 'Shows';
-// shows.appendChild(showsTitle);
-
 // everying below goes inside this !!!!!!!!!
 const showsContainer = document.createElement('div');
 showsContainer.classList.add('shows__container');
@@ -62,7 +56,7 @@ showsContainer.appendChild(showsUlOne);
 
 // li header
 const showsLi = document.createElement('li');
-showsLi.classList.add('shows__list__date');
+showsLi.classList.add('shows__list__date', 'shows__list__date--hidden');
 showsLi.innerText = 'DATE';
 showsUlOne.appendChild(showsLi);
 
@@ -79,7 +73,7 @@ showsContainer.appendChild(showsUlTwo);
 
 // li venue header
 const showsVenue = document.createElement('li');
-showsVenue.classList.add('shows__list__venue');
+showsVenue.classList.add('shows__list__venue', 'shows__list__venue--hidden');
 showsVenue.innerText = 'VENUE';
 showsUlTwo.appendChild(showsVenue);
 
@@ -98,7 +92,7 @@ showsContainer.appendChild(showsUlThree);
 
 // li location header
 const showsLocation = document.createElement('li');
-showsLocation.classList.add('shows__list__location');
+showsLocation.classList.add('shows__list__location', 'shows__list__location');
 showsLocation.innerText = 'LOCATION';
 showsUlThree.appendChild(showsLocation);
 
@@ -135,8 +129,7 @@ displayShows(showsArray);
 
 
 
-
-
+console.log(showsWrapper);
 
 
 

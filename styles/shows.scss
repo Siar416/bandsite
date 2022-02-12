@@ -52,6 +52,7 @@
 
   @include tablet-screen {
     width: 80%;
+    margin-right: auto;
   }
   @include desktop-screen {
     // width: 65%;
@@ -86,6 +87,34 @@
   padding-right: 16px;
   border-bottom: 1px solid $mercury;
 
+  &__list {
+    @include tablet-screen {
+      width: 150px;
+    }
+
+    @include desktop-screen {
+      width: 150px;
+    }
+  }
+
+  &__title {
+    @include page-section-header-font-tablet-desktop;
+    padding-top: 36px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+
+    @include tablet-screen {
+      padding-left: 36px;
+      padding-bottom: 36px;
+      padding-top: 70px;
+    }
+
+    @include desktop-screen {
+      padding-left: 80px;
+      padding-top: 80px;
+    }
+  }
+
   &__list__date {
     @include body-font-mobile;
     padding-bottom: 4px;
@@ -93,17 +122,31 @@
     color: $silver;
 
     @include tablet-screen {
-      padding: 36px 0;
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+      padding-top: 0;
     }
 
     @include desktop-screen {
-      padding: 36px 0;
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+      padding-top: 0;
     }
 
     &__text {
       @include mobile-screen {
         @include subheader-font-mobile;
         padding-bottom: 16px;
+      }
+
+      @include tablet-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
+      }
+
+      @include desktop-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
       }
     }
   }
@@ -113,9 +156,29 @@
     color: $silver;
     padding-bottom: 4px;
 
+    @include tablet-screen {
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
+
+    @include desktop-screen {
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
+
     &__text {
       @include subheader-font-mobile;
       padding-bottom: 16px;
+
+      @include tablet-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
+      }
+
+      @include desktop-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
+      }
     }
   }
 
@@ -124,9 +187,29 @@
     color: $silver;
     padding-bottom: 4px;
 
+    @include tablet-screen {
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
+
+    @include desktop-screen {
+      @include body-font-tablet-desktop;
+      padding-bottom: 36px;
+    }
+
     &__text {
       @include subheader-font-mobile;
       padding-bottom: 16px;
+
+      @include tablet-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
+      }
+
+      @include desktop-screen {
+        @include body-font-tablet-desktop;
+        padding-bottom: 36px;
+      }
     }
   }
 
@@ -165,18 +248,6 @@
   }
 }
 
-.shows__title {
-  @include page-header-font-mobile;
-  @include page-section-header-font-tablet-desktop;
-  padding-top: 36px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-}
-
-.shows__list {
-  // padding-bottom: 16px;
-}
-
 .btn {
   @include section-header-font-mobile;
   width: 100%;
@@ -192,7 +263,12 @@
     width: auto;
     padding-left: 18px;
     padding-right: 18px;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $drk-black;
+    }
   }
 
   @include desktop-screen {
@@ -200,5 +276,10 @@
     padding-left: 18px;
     padding-right: 18px;
     margin-bottom: 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $drk-black;
+    }
   }
 }

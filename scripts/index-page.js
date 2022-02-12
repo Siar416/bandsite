@@ -1,4 +1,4 @@
-let commentArray = [
+const commentArray = [
     {
         name: "Connor Walton",
         time: "02/17/2021",
@@ -23,7 +23,7 @@ let commentArray = [
 // trying a loop below
 // --reminder-- need to change let into const - most secure to less secure
 
-let comments = document.querySelector(".comments-added");
+const comments = document.querySelector(".comments-added");
 
     function displayComment() {
 
@@ -33,17 +33,17 @@ let comments = document.querySelector(".comments-added");
         
 
     // this is the main container
-    let divContainer = document.createElement('div');
+    const divContainer = document.createElement('div');
     divContainer.classList.add('comments-added__section');
     comments.appendChild(divContainer);
 
     //trying div for name and date
-    let flexDiv = document.createElement('div');
+    const flexDiv = document.createElement('div');
     flexDiv.classList.add('comments__div');
     divContainer.appendChild(flexDiv);
 
     // image of avatar
-    let image = document.createElement('img');
+    const image = document.createElement('img');
     image.classList.add('comments-added__avatar');
     // divContainer.appendChild(image);
     flexDiv.appendChild(image);
@@ -51,7 +51,7 @@ let comments = document.querySelector(".comments-added");
    
 
     // name
-    let name = document.createElement('p');
+    const name = document.createElement('p');
     name.innerText = commentArray[key].name;
     name.classList.add('comments-added__name');
     // divContainer.appendChild(name);
@@ -59,14 +59,14 @@ let comments = document.querySelector(".comments-added");
     
 
     // date/time
-    let time = document.createElement('p');
+    const time = document.createElement('p');
     time.innerText = commentArray[key].time;
     time.classList.add('comments-added__date');
     // divContainer.appendChild(time);
     flexDiv.appendChild(time);
 
     // comment body
-    let actualComment = document.createElement('p');
+    const actualComment = document.createElement('p');
     actualComment.innerText = commentArray[key].comment;
     actualComment.classList.add('comments-added__body');
     divContainer.appendChild(actualComment);
@@ -80,8 +80,8 @@ let comments = document.querySelector(".comments-added");
 
 
     // shorten date
-    let date = new Date();
-    let newDate = date.toLocaleDateString('en-US');
+    const date = new Date();
+    const newDate = date.toLocaleDateString('en-US');
   
     const mainForm = document.getElementById('mainForm');
 
@@ -89,49 +89,56 @@ let comments = document.querySelector(".comments-added");
     /////// form submit
 
     mainForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-    let comments = document.querySelector(".comments-added");
-    
-    
-    const formInput = {};
+    e.preventDefault();
 
-    formInput.name = e.target.name.value;
-    formInput.time = newDate;
-    formInput.comment = e.target.comment.value;
-    // console.log(formInput);
+    const formName = e.target.name.value;
+    const formComment = e.target.comment.value;
+    const formTime = newDate;
+    const comments = document.querySelector(".comments-added");
 
+    if(formName && formComment !== "") {
+    
+    // const formInput = {};
+
+    //  formInput.name = e.target.name.value;
+    //  formInput.comment = e.target.comment.value;
+    //  formInput.time = newDate;
+  
+  
 
  
      // this is the main container
-    let divContainer = document.createElement('div');
+    const divContainer = document.createElement('div');
     divContainer.classList.add('comments-added__section');
     comments.appendChild(divContainer);
 
 
      //trying div for name and date
-     let flexDiv = document.createElement('div');
+     const flexDiv = document.createElement('div');
      flexDiv.classList.add('comments__div');
      divContainer.appendChild(flexDiv);
 
 
     // image of avatar
-    let image = document.createElement('img');
+    const image = document.createElement('img');
     image.classList.add('comments-added__avatar');
     // divContainer.appendChild(image);
     flexDiv.appendChild(image);
 
 
     // name
-    let name = document.createElement('p');
-    name.innerText = formInput.name;
+    const name = document.createElement('p');
+    // name.innerText = formInput.name;
+    name.innerText = formName;
     name.classList.add('comments-added__name');
     // divContainer.appendChild(name);
     flexDiv.appendChild(name);
 
 
     // date/time
-    let time = document.createElement('p');
-    time.innerText = formInput.time;
+    const time = document.createElement('p');
+    //  time.innerText = formInput.time;
+   time.innerText = formTime;
     time.classList.add('comments-added__date');
     // divContainer.appendChild(time);
     flexDiv.appendChild(time);
@@ -140,27 +147,36 @@ let comments = document.querySelector(".comments-added");
 
  
     // comment body
-    let actualComment = document.createElement('p');
-    actualComment.innerText = formInput.comment;
+    const actualComment = document.createElement('p');
+    // actualComment.innerText = formInput.comment;
+    actualComment.innerText = formComment;
     actualComment.classList.add('comments-added__body');
     divContainer.appendChild(actualComment);
     
-
+    
+        comments.appendChild(divContainer);
+        comments.insertBefore(divContainer, comments.childNodes[0]);
+        
+    }  
 
     
-    comments.appendChild(divContainer);
     
-    comments.insertBefore(divContainer, comments.childNodes[0]);
+
+   
+
+    
+    
+
+    
 
 
 
     // reset the form
-    e.target.name.value = '';
-    e.target.comment.value = '';
+     e.target.name.value = '';
+     e.target.comment.value = '';
 
-    // commentArray.push(formInput);
-    // displayComment();
-})
+
+});
 
 
 
