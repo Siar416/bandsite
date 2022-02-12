@@ -86,12 +86,12 @@ let comments = document.querySelector(".comments-added");
     const mainForm = document.getElementById('mainForm');
 
 
+    /////// form submit
 
-
-    // form submit
     mainForm.addEventListener('submit', (e) => {
+        e.preventDefault();
     let comments = document.querySelector(".comments-added");
-    e.preventDefault();
+    
     
     const formInput = {};
 

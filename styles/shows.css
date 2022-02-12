@@ -183,6 +183,8 @@ table {
 @media screen and (min-width: 1280px) {
   .hero-image-shows {
     align-items: center;
+    flex-direction: row;
+    padding-right: 80px;
   }
 }
 
