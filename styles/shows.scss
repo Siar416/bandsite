@@ -9,7 +9,7 @@
       rgba(50, 50, 50, 0.5)
     ),
     url(../assets/images/hero-shows.jpg);
-  height: 31vh;
+  height: 35vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,9 +81,54 @@
 }
 
 .shows {
+  font-family: $primary-font-family;
   padding-left: 16px;
   padding-right: 16px;
   border-bottom: 1px solid $mercury;
+
+  &__list__date {
+    @include body-font-mobile;
+    padding-bottom: 4px;
+    padding-top: 16px;
+    color: $silver;
+
+    @include tablet-screen {
+      padding: 36px 0;
+    }
+
+    @include desktop-screen {
+      padding: 36px 0;
+    }
+
+    &__text {
+      @include mobile-screen {
+        @include subheader-font-mobile;
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  &__list__venue {
+    @include body-font-mobile;
+    color: $silver;
+    padding-bottom: 4px;
+
+    &__text {
+      @include subheader-font-mobile;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__list__location {
+    @include body-font-mobile;
+    color: $silver;
+    padding-bottom: 4px;
+
+    &__text {
+      @include subheader-font-mobile;
+      padding-bottom: 16px;
+    }
+  }
 
   @include tablet-screen {
     padding-left: 36px;
@@ -118,46 +163,18 @@
     padding-left: 80px;
     padding-right: 80px;
   }
-
-  &__list__date {
-    @include subheader-font-mobile;
-    padding-bottom: 16px;
-
-    @include tablet-screen {
-      padding: 36px 0;
-    }
-
-    @include desktop-screen {
-      padding: 36px 0;
-    }
-  }
-
-  &__list__date-header {
-    @include subheader-font-mobile;
-    color: $silver;
-
-    @include tablet-screen {
-      @include body-font-tablet-desktop;
-      color: $silver;
-      // padding-bottom: 36px;
-    }
-
-    @include desktop-screen {
-      color: $silver;
-      // padding-bottom: 48px;
-    }
-  }
 }
 
 .shows__title {
   @include page-header-font-mobile;
   @include page-section-header-font-tablet-desktop;
   padding-top: 36px;
-  padding-bottom: 36px;
+  padding-bottom: 16px;
+  padding-left: 16px;
 }
 
 .shows__list {
-  // background-color: green;
+  // padding-bottom: 16px;
 }
 
 .btn {

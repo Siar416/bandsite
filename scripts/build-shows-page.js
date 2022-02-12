@@ -30,66 +30,84 @@ const showsArray = [{
 }
 ]
 
-const shows = document.querySelector('.shows');
+const showsWrapper = document.querySelector('.shows-wrapper');
 
 function displayShows(array) {
     
 
 for (const key in array) {
 
-const showsTitle = document.createElement('h2');
-showsTitle.classList.add('shows__title', 'shows__title--hidden');
-showsTitle.innerText = 'Shows';
-shows.appendChild(showsTitle);
+
+const shows = document.createElement('section');
+shows.classList.add('shows');
+showsWrapper.appendChild(shows);
+
+
+/// this will be static
+// const showsTitle = document.createElement('h2');
+// showsTitle.classList.add('shows__title', 'shows__title--hidden');
+// showsTitle.innerText = 'Shows';
+// shows.appendChild(showsTitle);
 
 // everying below goes inside this !!!!!!!!!
 const showsContainer = document.createElement('div');
 showsContainer.classList.add('shows__container');
+shows.appendChild(showsContainer);
+
 
 // ul
-const showsUl = document.createElement('ul');
-showsUl.classList.add('shows__list');
-showsContainer.appendChild(showsUl);
+const showsUlOne = document.createElement('ul');
+showsUlOne.classList.add('shows__list');
+showsContainer.appendChild(showsUlOne);
 
 // li header
 const showsLi = document.createElement('li');
-showsLi.classList.add('shows__list__date-header', 'shows__list__date-header--hidden');
+showsLi.classList.add('shows__list__date');
 showsLi.innerText = 'DATE';
-showsUl.appendChild(showsLi);
+showsUlOne.appendChild(showsLi);
 
 // li from JS for Date
 const showsListDate = document.createElement('li');
-showsListDate.classList.add('shows__list__date');
+showsListDate.classList.add('shows__list__date__text');
 showsListDate.innerText = array[key].date;
-showsUl.appendChild(showsListDate);
+showsUlOne.appendChild(showsListDate);
 
+
+const showsUlTwo = document.createElement('ul');
+showsUlTwo.classList.add('shows__list');
+showsContainer.appendChild(showsUlTwo);
 
 // li venue header
 const showsVenue = document.createElement('li');
-showsVenue.classList.add('shows__list__date-header', 'shows__list__date-header--hidden');
+showsVenue.classList.add('shows__list__venue');
 showsVenue.innerText = 'VENUE';
-showsUl.appendChild(showsVenue);
+showsUlTwo.appendChild(showsVenue);
 
 
 // li from JS for venue
 const showsVenueList = document.createElement('li');
-showsVenueList.classList.add('.shows__list__date');
+showsVenueList.classList.add('shows__list__venue__text');
 showsVenueList.innerText = array[key].venue;
-showsUl.appendChild(showsVenueList);
+showsUlTwo.appendChild(showsVenueList);
+
+
+const showsUlThree = document.createElement('ul');
+showsUlThree.classList.add('shows__list');
+showsContainer.appendChild(showsUlThree);
 
 
 // li location header
 const showsLocation = document.createElement('li');
-showsLocation.classList.add('shows__list__date-header', 'shows__list__date-header--hidden');
+showsLocation.classList.add('shows__list__location');
 showsLocation.innerText = 'LOCATION';
-showsUl.appendChild(showsLocation);
+showsUlThree.appendChild(showsLocation);
 
 
 // li from JS for location
 const showsLocationList = document.createElement('li');
-showsLocationList.classList.add('shows__list__date');
+showsLocationList.classList.add('shows__list__location__text');
 showsLocationList.innerText = array[key].location;
-showsUl.appendChild(showsLocationList);
+showsUlThree.appendChild(showsLocationList);
 
 // btn
 const btn = document.createElement('button');
@@ -99,7 +117,6 @@ showsContainer.appendChild(btn);
 
 
 
-shows.appendChild(showsContainer);
 
 
 
@@ -107,7 +124,8 @@ shows.appendChild(showsContainer);
 
 
 
-//make sure everthing is appended if not showing up
+
+
 
 
 }
