@@ -156,6 +156,9 @@ const comments = document.querySelector(".comments-added");
     
         comments.appendChild(divContainer);
         comments.insertBefore(divContainer, comments.childNodes[0]);
+
+
+     
         
     }  
 

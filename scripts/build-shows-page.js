@@ -1,4 +1,4 @@
-const showsArray = [{
+ const showsArray = [{
     date: "Mon Sept 06 2021",
     venue: "Ronald Lane",
     location: "San Francisco, CA"
@@ -30,123 +30,171 @@ const showsArray = [{
 }
 ]
 
-const showsWrapper = document.querySelector('.shows-wrapper');
+
 
 function displayShows(array) {
-    
+
+if(showsArray.length === 0){
+    return;
+}
+
+let counter = 0;
+const showsWrapper = document.querySelector('.shows-wrapper');
 
 for (const key in array) {
 
-
-const shows = document.createElement('section');
-shows.classList.add('shows');
-showsWrapper.appendChild(shows);
-
-
-// everying below goes inside this !!!!!!!!!
-const showsContainer = document.createElement('div');
-showsContainer.classList.add('shows__container');
-shows.appendChild(showsContainer);
+    if (counter !== 0) {
+            const shows = document.createElement('section');
+            shows.classList.add('shows');
+            showsWrapper.appendChild(shows);
 
 
-// ul
-const showsUlOne = document.createElement('ul');
-showsUlOne.classList.add('shows__list');
-showsContainer.appendChild(showsUlOne);
-
-// li header
-const showsLi = document.createElement('li');
-showsLi.classList.add('shows__list__date', 'shows__list__date--hidden');
-showsLi.innerText = 'DATE';
-showsUlOne.appendChild(showsLi);
-
-// li from JS for Date
-const showsListDate = document.createElement('li');
-showsListDate.classList.add('shows__list__date__text');
-showsListDate.innerText = array[key].date;
-showsUlOne.appendChild(showsListDate);
+            // everying below goes inside this !!!!!!!!!
+            const showsContainer = document.createElement('div');
+            showsContainer.classList.add('shows__container');
+            shows.appendChild(showsContainer);
 
 
-const showsUlTwo = document.createElement('ul');
-showsUlTwo.classList.add('shows__list');
-showsContainer.appendChild(showsUlTwo);
+            // ul
+            const showsUlOne = document.createElement('ul');
+            showsUlOne.classList.add('shows__list');
+            showsContainer.appendChild(showsUlOne);
 
-// li venue header
-const showsVenue = document.createElement('li');
-showsVenue.classList.add('shows__list__venue', 'shows__list__venue--hidden');
-showsVenue.innerText = 'VENUE';
-showsUlTwo.appendChild(showsVenue);
+            // li header
+            const showsLi = document.createElement('li');
+            showsLi.classList.add('shows__list__date', 'shows__list__date--hidden');
+            showsLi.innerText = 'DATE';
+            showsUlOne.appendChild(showsLi);
 
-
-// li from JS for venue
-const showsVenueList = document.createElement('li');
-showsVenueList.classList.add('shows__list__venue__text');
-showsVenueList.innerText = array[key].venue;
-showsUlTwo.appendChild(showsVenueList);
-
-
-const showsUlThree = document.createElement('ul');
-showsUlThree.classList.add('shows__list');
-showsContainer.appendChild(showsUlThree);
+            // li from JS for Date
+            const showsListDate = document.createElement('li');
+            showsListDate.classList.add('shows__list__date__text');
+            showsListDate.innerText = array[key].date;
+            showsUlOne.appendChild(showsListDate);
 
 
-// li location header
-const showsLocation = document.createElement('li');
-showsLocation.classList.add('shows__list__location', 'shows__list__location');
-showsLocation.innerText = 'LOCATION';
-showsUlThree.appendChild(showsLocation);
+            const showsUlTwo = document.createElement('ul');
+            showsUlTwo.classList.add('shows__list');
+            showsContainer.appendChild(showsUlTwo);
+
+            // li venue header
+            const showsVenue = document.createElement('li');
+            showsVenue.classList.add('shows__list__venue', 'shows__list__venue--hidden');
+            showsVenue.innerText = 'VENUE';
+            showsUlTwo.appendChild(showsVenue);
 
 
-// li from JS for location
-const showsLocationList = document.createElement('li');
-showsLocationList.classList.add('shows__list__location__text');
-showsLocationList.innerText = array[key].location;
-showsUlThree.appendChild(showsLocationList);
-
-// btn
-const btn = document.createElement('button');
-btn.classList.add('btn');
-btn.innerText = 'Buy Tickets';
-showsContainer.appendChild(btn);
+            // li from JS for venue
+            const showsVenueList = document.createElement('li');
+            showsVenueList.classList.add('shows__list__venue__text');
+            showsVenueList.innerText = array[key].venue;
+            showsUlTwo.appendChild(showsVenueList);
 
 
+            const showsUlThree = document.createElement('ul');
+            showsUlThree.classList.add('shows__list');
+            showsContainer.appendChild(showsUlThree);
 
 
+            // li location header
+            const showsLocation = document.createElement('li');
+            showsLocation.classList.add('shows__list__location', 'shows__list__location--hidden');
+            showsLocation.innerText = 'LOCATION';
+            showsUlThree.appendChild(showsLocation);
 
 
+            // li from JS for location
+            const showsLocationList = document.createElement('li');
+            showsLocationList.classList.add('shows__list__location__text');
+            showsLocationList.innerText = array[key].location;
+            showsUlThree.appendChild(showsLocationList);
+
+            // btn
+            const btn = document.createElement('button');
+            btn.classList.add('btn');
+            btn.innerText = 'Buy Tickets';
+            showsContainer.appendChild(btn);
+        } else {
+
+            // section
+            const shows = document.createElement('section');
+            shows.classList.add('shows');
+            showsWrapper.appendChild(shows);
+
+            //container
+            const showsContainer = document.createElement('div');
+            showsContainer.classList.add('shows__container');
+            shows.appendChild(showsContainer)
+
+            // =========== DATE======================
+            //static one -> date
+            const showsListStaticOne = document.createElement('ul');
+            showsListStaticOne.classList.add('shows__list');
+            showsContainer.appendChild(showsListStaticOne);
+
+            const showsLi = document.createElement('li');
+            showsLi.classList.add('shows__list__date');
+            showsLi.innerText = 'DATE';
+            showsListStaticOne.appendChild(showsLi);
+
+            // ==========VENUE=================
+
+            const showsListStaticTwo = document.createElement('ul');
+            showsListStaticTwo.classList.add('shows__list');
+            showsContainer.appendChild(showsListStaticTwo);
+
+            const showsVenue = document.createElement('li');
+            showsVenue.classList.add('shows__list__venue');
+            showsVenue.innerText = 'VENUE';
+            showsListStaticTwo.appendChild(showsVenue);
+
+            //==============Location ==================
+            const showsListStaticThree = document.createElement('ul');
+            showsListStaticThree.classList.add('shows__list');
+            showsContainer.appendChild(showsListStaticThree);
 
 
+            // li location header
+            const showsLocation = document.createElement('li');
+            showsLocation.classList.add('shows__list__location');
+            showsLocation.innerText = 'LOCATION';
+            showsListStaticThree.appendChild(showsLocation);
 
 
+            const btn = document.createElement('button');
+            btn.classList.add('btn');
+            btn.innerText = 'Buy Tickets';
+            showsContainer.appendChild(btn);
 
 
+        
 
 
-}
+            // const showsListStaticOne = document.querySelector('.shows__container__static-date');
+            // const showsListStaticTwo = document.querySelector('.shows__container__static-venue');
+            // const showsListStaticThree = document.querySelector('.shows__container__static-location');
+
+
+            const showsListDate = document.createElement('li');
+            showsListDate.classList.add('shows__list__date__text');
+            showsListDate.innerText = array[key].date;
+
+            const showsVenueList = document.createElement('li');
+            showsVenueList.classList.add('shows__list__venue__text');
+            showsVenueList.innerText = array[key].venue;
+
+            const showsLocationList = document.createElement('li');
+            showsLocationList.classList.add('shows__list__location__text');
+            showsLocationList.innerText = array[key].location
+
+
+            showsListStaticOne.appendChild(showsListDate);
+            showsListStaticTwo.appendChild(showsVenueList);
+            showsListStaticThree.appendChild(showsLocationList);
+        }
+    counter++;
+    }
 }
 
 displayShows(showsArray);
-
-
-
-console.log(showsWrapper);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

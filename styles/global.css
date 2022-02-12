@@ -131,17 +131,17 @@ table {
 }
 
 @font-face {
-  font-family: "avenir-regular";
+  font-family: "avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
   src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
 }
 @font-face {
-  font-family: "avenir-demi";
+  font-family: "avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
   src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("opentype");
 }
 @font-face {
-  font-family: "avenir-bold";
+  font-family: "avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
   src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("opentype");
 }
@@ -254,7 +254,7 @@ table {
   }
 }
 .navbar__links {
-  font-family: "avenir-demi";
+  font-family: "avenir";
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -263,7 +263,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .navbar__links {
-    font-family: "avenir-demi";
+    font-family: "avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -272,7 +272,7 @@ table {
 }
 @media screen and (min-width: 1280px) {
   .navbar__links {
-    font-family: "avenir-demi";
+    font-family: "avenir";
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -324,7 +324,7 @@ table {
 }
 
 .socials__text {
-  font-family: "avenir-bold";
+  font-family: "avenir";
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -333,7 +333,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .socials__text {
-    font-family: "avenir-bold";
+    font-family: "avenir";
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -343,7 +343,7 @@ table {
 }
 @media screen and (min-width: 1280px) {
   .socials__text {
-    font-family: "avenir-bold";
+    font-family: "avenir";
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -426,7 +426,7 @@ table {
   padding-bottom: 1rem;
 }
 .contacts__info {
-  font-family: "avenir-regular";
+  font-family: "avenir";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -434,7 +434,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts__info {
-    font-family: "avenir-regular";
+    font-family: "avenir";
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -443,7 +443,7 @@ table {
 }
 @media screen and (min-width: 1280px) {
   .contacts__info {
-    font-family: "avenir-regular";
+    font-family: "avenir";
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -470,7 +470,7 @@ table {
   }
 }
 .footer-logo__text {
-  font-family: "avenir-regular";
+  font-family: "avenir";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -479,7 +479,7 @@ table {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer-logo__text {
-    font-family: "avenir-regular";
+    font-family: "avenir";
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -489,7 +489,7 @@ table {
 }
 @media screen and (min-width: 1280px) {
   .footer-logo__text {
-    font-family: "avenir-regular";
+    font-family: "avenir";
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;

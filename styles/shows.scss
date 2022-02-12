@@ -9,7 +9,7 @@
       rgba(50, 50, 50, 0.5)
     ),
     url(../assets/images/hero-shows.jpg);
-  height: 35vh;
+  height: 45vh;
   width: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,12 +22,12 @@
   @include tablet-screen {
     padding-left: 2.25rem;
     padding-right: 0;
-    height: 45vh;
+    height: 70vh;
   }
 
   @include desktop-screen {
     padding-left: 5rem;
-    height: 73vh;
+    height: 85vh;
   }
 }
 
@@ -36,44 +36,43 @@
   flex-direction: column;
 
   @include tablet-screen {
-    padding-right: 36px;
+    padding-right: 2.25rem;
   }
 
   @include desktop-screen {
     align-items: center;
     flex-direction: row;
-    padding-right: 80px;
+    padding-right: 5rem;
   }
 }
 
 .hero-image__text {
   width: 85%;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 
   @include tablet-screen {
     width: 80%;
     margin-right: auto;
   }
   @include desktop-screen {
-    // width: 65%;
     display: flex;
     flex-direction: column;
   }
 }
 
 .soundCloud {
-  width: 200px;
+  width: 12.5rem;
 }
 
 .hero-image__text-header {
   @include subheader-font-mobile;
-  padding-top: 36px;
-  padding-bottom: 24px;
+  padding-top: 2.25rem;
+  padding-bottom: 1.5rem;
 
   @include tablet-screen {
     @include subheader-font-tablet-desktop;
-    padding-top: 48px;
-    padding-bottom: 24px;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
   }
 
   @include desktop-screen {
@@ -83,70 +82,77 @@
 
 .shows {
   font-family: $primary-font-family;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-bottom: 1px solid $mercury;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 0.0625rem solid $mercury;
 
   &__list {
     @include tablet-screen {
-      width: 150px;
+      width: 9.375rem;
     }
 
     @include desktop-screen {
-      width: 150px;
+      width: 9.375rem;
     }
   }
 
   &__title {
     @include page-section-header-font-tablet-desktop;
-    padding-top: 36px;
-    padding-bottom: 16px;
-    padding-left: 16px;
+    padding-top: 2.25rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
 
     @include tablet-screen {
-      padding-left: 36px;
-      padding-bottom: 36px;
-      padding-top: 70px;
+      padding-left: 2.25rem;
+      padding-bottom: 2.25rem;
+      padding-top: 4.375rem;
     }
 
     @include desktop-screen {
-      padding-left: 80px;
-      padding-top: 80px;
+      padding-left: 5rem;
+      padding-top: 5rem;
     }
   }
 
   &__list__date {
     @include body-font-mobile;
-    padding-bottom: 4px;
-    padding-top: 16px;
+    padding-bottom: 0.25rem;
+    padding-top: 1rem;
     color: $silver;
 
     @include tablet-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
-      padding-top: 0;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     @include desktop-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
       padding-top: 0;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     &__text {
       @include mobile-screen {
         @include subheader-font-mobile;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
       }
 
       @include tablet-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
+        padding-top: 2.25rem;
       }
 
       @include desktop-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
+        padding-top: 2.25rem;
       }
     }
   }
@@ -154,30 +160,38 @@
   &__list__venue {
     @include body-font-mobile;
     color: $silver;
-    padding-bottom: 4px;
+    padding-bottom: 0.25rem;
 
     @include tablet-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     @include desktop-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     &__text {
       @include subheader-font-mobile;
-      padding-bottom: 16px;
+      padding-bottom: 1rem;
 
       @include tablet-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
       }
 
       @include desktop-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
+        padding-top: 2.25rem;
       }
     }
   }
@@ -185,43 +199,51 @@
   &__list__location {
     @include body-font-mobile;
     color: $silver;
-    padding-bottom: 4px;
+    padding-bottom: 0.25rem;
 
     @include tablet-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
+      padding-bottom: 2.25rem;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     @include desktop-screen {
       @include body-font-tablet-desktop;
-      padding-bottom: 36px;
+
+      &--hidden {
+        display: none;
+      }
     }
 
     &__text {
       @include subheader-font-mobile;
-      padding-bottom: 16px;
+      padding-bottom: 1rem;
 
       @include tablet-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
       }
 
       @include desktop-screen {
         @include body-font-tablet-desktop;
-        padding-bottom: 36px;
+        padding-bottom: 2.25rem;
+        padding-top: 2.25rem;
       }
     }
   }
 
   @include tablet-screen {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     border-bottom: none;
 
     &__container {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $mercury;
+      border-bottom: 0.0625rem solid $mercury;
       align-items: center;
       align-items: flex-end;
     }
@@ -235,16 +257,25 @@
     @include desktop-screen {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $mercury;
+      border-bottom: 0.0625rem solid $mercury;
       align-items: center;
       width: 80%;
       margin-left: auto;
+      padding: 0 1.5rem;
+
+      &:hover {
+        background-color: $alabaster;
+      }
+
+      &:active {
+        background-color: $mercury;
+      }
     }
   }
 
   @include desktop-screen {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -254,16 +285,16 @@
   background-color: $black;
   color: $white;
   border: none;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  padding: 8px;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 
   @include tablet-screen {
     @include subheader-font-tablet-desktop;
     width: auto;
-    padding-left: 18px;
-    padding-right: 18px;
-    margin-bottom: 25px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    margin-bottom: 1.5625rem;
 
     &:hover {
       cursor: pointer;
@@ -273,8 +304,8 @@
 
   @include desktop-screen {
     width: auto;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
     margin-bottom: 0;
 
     &:hover {
