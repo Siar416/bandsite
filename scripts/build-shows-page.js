@@ -30,8 +30,6 @@
 }
 ]
 
-
-
 function displayShows(array) {
 
 if(showsArray.length === 0){
@@ -48,12 +46,10 @@ for (const key in array) {
             shows.classList.add('shows');
             showsWrapper.appendChild(shows);
 
-
-            // everying below goes inside this !!!!!!!!!
+            // shows container
             const showsContainer = document.createElement('div');
             showsContainer.classList.add('shows__container');
             shows.appendChild(showsContainer);
-
 
             // ul
             const showsUlOne = document.createElement('ul');
@@ -72,7 +68,6 @@ for (const key in array) {
             showsListDate.innerText = array[key].date;
             showsUlOne.appendChild(showsListDate);
 
-
             const showsUlTwo = document.createElement('ul');
             showsUlTwo.classList.add('shows__list');
             showsContainer.appendChild(showsUlTwo);
@@ -83,25 +78,21 @@ for (const key in array) {
             showsVenue.innerText = 'VENUE';
             showsUlTwo.appendChild(showsVenue);
 
-
             // li from JS for venue
             const showsVenueList = document.createElement('li');
             showsVenueList.classList.add('shows__list__venue__text');
             showsVenueList.innerText = array[key].venue;
             showsUlTwo.appendChild(showsVenueList);
 
-
             const showsUlThree = document.createElement('ul');
             showsUlThree.classList.add('shows__list');
             showsContainer.appendChild(showsUlThree);
-
 
             // li location header
             const showsLocation = document.createElement('li');
             showsLocation.classList.add('shows__list__location', 'shows__list__location--hidden');
             showsLocation.innerText = 'LOCATION';
             showsUlThree.appendChild(showsLocation);
-
 
             // li from JS for location
             const showsLocationList = document.createElement('li');
@@ -114,6 +105,7 @@ for (const key in array) {
             btn.classList.add('btn');
             btn.innerText = 'Buy Tickets';
             showsContainer.appendChild(btn);
+
         } else {
 
             // section
@@ -153,27 +145,16 @@ for (const key in array) {
             showsListStaticThree.classList.add('shows__list');
             showsContainer.appendChild(showsListStaticThree);
 
-
             // li location header
             const showsLocation = document.createElement('li');
             showsLocation.classList.add('shows__list__location');
             showsLocation.innerText = 'LOCATION';
             showsListStaticThree.appendChild(showsLocation);
 
-
             const btn = document.createElement('button');
             btn.classList.add('btn');
             btn.innerText = 'Buy Tickets';
             showsContainer.appendChild(btn);
-
-
-        
-
-
-            // const showsListStaticOne = document.querySelector('.shows__container__static-date');
-            // const showsListStaticTwo = document.querySelector('.shows__container__static-venue');
-            // const showsListStaticThree = document.querySelector('.shows__container__static-location');
-
 
             const showsListDate = document.createElement('li');
             showsListDate.classList.add('shows__list__date__text');
