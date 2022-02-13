@@ -618,6 +618,7 @@ table {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    margin-bottom: 1rem;
   }
   .comments__input {
     font-family: "avenir";
@@ -795,6 +796,7 @@ table {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    margin-bottom: 2.25rem;
   }
   .comments__input {
     font-family: "avenir";

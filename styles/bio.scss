@@ -553,6 +553,7 @@
 
     &__header {
       @include page-header-font-tablet-desktop;
+      margin-bottom: 1rem;
     }
 
     &__input {
@@ -705,6 +706,7 @@
 
     &__header {
       @include page-header-font-tablet-desktop;
+      margin-bottom: 2.25rem;
     }
     &__input {
       @include subheader-font-tablet-desktop;

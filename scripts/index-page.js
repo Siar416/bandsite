@@ -119,25 +119,23 @@ const comments = document.querySelector(".comments-added");
             comments.appendChild(divContainer);
             comments.insertBefore(divContainer, comments.childNodes[0]);
    
-    }  
-
-            // reset the form
-            e.target.name.value = '';
-            e.target.comment.value = '';
-
-            const nameValidation = document.getElementById('nameValidate');
-            const commentValidation = document.getElementById('commentValidate');
-            if(nameValidation.value === '') {
-                // console.log('mt');
-                nameValidation.style.borderColor = '#d22d2d';
-            }
-            if(commentValidation.value === '') {
-                commentValidation.style.borderColor = '#d22d2d';
-            }
-            
-
+    }       
+formValidation(e);
 
 });
 
-
-
+// simple form validation
+function formValidation(e) {
+    const nameValidation = document.getElementById('nameValidate');
+    const commentValidation = document.getElementById('commentValidate');
+    if(nameValidation.value === '') {
+        nameValidation.style.borderColor = '#d22d2d';
+    }
+    if(commentValidation.value === '') {
+        commentValidation.style.borderColor = '#d22d2d';
+    } 
+    else {
+        e.target.name.value = '';
+        e.target.comment.value = '';
+    }
+}
