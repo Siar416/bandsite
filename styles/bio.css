@@ -545,6 +545,9 @@ table {
     background-color: #fafafa;
     border-color: #e1e1e1;
   }
+  .comments__info__input-comments:focus {
+    border-color: #323232;
+  }
   .comments__submit-button {
     font-family: "avenir";
     font-size: 0.875rem;
@@ -660,6 +663,9 @@ table {
     margin-bottom: 1rem;
     background-color: #fafafa;
   }
+  .comments__info__input-name:focus {
+    border-color: #323232;
+  }
   .comments__info__input-name-header {
     font-family: "avenir";
     font-size: 0.875rem;
@@ -676,6 +682,9 @@ table {
     resize: none;
     margin-top: 0.25rem;
     background-color: #fafafa;
+  }
+  .comments__info__input-comments:focus {
+    border-color: #323232;
   }
   .comments ::-moz-placeholder {
     font-family: "avenir";
@@ -711,7 +720,7 @@ table {
     align-items: flex-end;
     height: 2.5rem;
     margin-left: auto;
-    border-radius: 2.5rem;
+    border-radius: 0.25rem;
     border: none;
     background-color: #323232;
     color: #ffffff;
@@ -835,6 +844,9 @@ table {
     margin-bottom: 1rem;
     background-color: #fafafa;
   }
+  .comments__info__input-name:focus {
+    border-color: #323232;
+  }
   .comments__info__input-comments {
     width: 99%;
     height: 6.25rem;
@@ -844,6 +856,9 @@ table {
     resize: none;
     margin-top: 0.25rem;
     background-color: #fafafa;
+  }
+  .comments__info__input-comments:focus {
+    border-color: #323232;
   }
   .comments ::-moz-placeholder {
     font-family: "avenir";

@@ -470,6 +470,10 @@
       margin-top: 0.25rem;
       background-color: $alabaster;
       border-color: $mercury;
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     &__submit-button {
@@ -591,6 +595,10 @@
       margin-top: 0.25rem;
       margin-bottom: 1rem;
       background-color: $alabaster;
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     &__info__input-name-header {
@@ -607,6 +615,10 @@
       resize: none;
       margin-top: 0.25rem;
       background-color: $alabaster;
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     ::placeholder {
@@ -622,7 +634,7 @@
       align-items: flex-end;
       height: 2.5rem;
       margin-left: auto;
-      border-radius: 2.5rem;
+      border-radius: 0.25rem;
       border: none;
       background-color: $black;
       color: $white;
@@ -735,6 +747,10 @@
       margin-top: 0.25rem;
       margin-bottom: 1rem;
       background-color: $alabaster;
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     &__info__input-comments {
@@ -746,6 +762,10 @@
       resize: none;
       margin-top: 0.25rem;
       background-color: $alabaster;
+
+      &:focus {
+        border-color: $black;
+      }
     }
 
     ::placeholder {

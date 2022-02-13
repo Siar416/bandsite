@@ -162,7 +162,7 @@ const comments = document.querySelector(".comments-added");
         
     }  
 
-    
+  
     
 
    
@@ -175,9 +175,23 @@ const comments = document.querySelector(".comments-added");
 
 
     // reset the form
-     e.target.name.value = '';
+    e.target.name.value = '';
      e.target.comment.value = '';
+   
 
+
+
+
+// styled error using JS
+let nameForm = document.querySelector('.comments__info__input-name');
+let commentForm = document.querySelector('.comments__info__input-comments');
+    if(nameForm.innerText === '') {
+        nameForm.style.borderColor = '#d22d2d';
+    }
+    if(commentForm.innerText === '') {
+        commentForm.style.borderColor = '#d22d2d';
+    }
+    
 
 });
 
