@@ -27,18 +27,14 @@
     display: flex;
     flex-direction: row;
     padding-left: 5rem;
-    align-items: stretch;
     align-items: baseline;
   }
 }
 
 .logo {
   @include mobile-screen {
-    display: block;
     margin: 0 auto;
     padding-top: 0.9375rem;
-    display: flex;
-    margin: 0 auto;
   }
 }
 
@@ -63,8 +59,7 @@
     text-align: center;
     width: 50%;
     border-bottom: 0.3125rem solid transparent;
-    padding-bottom: 0.4375rem;
-    padding-top: 0.625rem;
+    padding: 0.625rem 0 0.4375rem 0;
   }
 
   &__section--active:hover {
@@ -130,14 +125,12 @@
   }
 }
 .footer {
-  padding-left: 16px;
+  padding-left: 1rem;
   background-color: $black;
 
   @include tablet-screen {
-    // padding: 3rem;
-    padding: 48px 36px 36px;
+    padding: 3rem 2.25rem 2.25rem;
     position: relative;
-    padding-bottom: 2.25rem;
   }
 
   @include desktop-screen {
@@ -177,8 +170,6 @@
 
   @include tablet-screen {
     @include page-section-header-font-tablet-desktop;
-    padding-top: 0;
-    padding-left: 0;
   }
 
   @include desktop-screen {
@@ -206,7 +197,6 @@
 }
 
 .socials__img {
-  padding-left: 1rem;
   padding-top: 1.5rem;
   display: inline-flex;
   justify-content: space-between;
@@ -230,13 +220,12 @@
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 36px;
+  padding-bottom: 2.25rem;
 
   @include tablet-screen {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     padding-top: 3rem;
 
     &__grouping {
@@ -284,15 +273,10 @@
 }
 
 .footer-logo {
-  // padding-left: 1rem;
-
   @include tablet-screen {
-    padding: 0rem;
   }
 
   &__img {
-    // padding-top: 3rem;
-
     @include tablet-screen {
       display: none;
     }
@@ -311,16 +295,12 @@
   &__text {
     @include tablet-screen {
       @include footer-font-tablet-desktop;
-
-      padding-top: 0;
-      padding-bottom: 0;
     }
   }
 
   &__text {
     @include desktop-screen {
       @include footer-font-tablet-desktop;
-      padding: 0 0;
     }
   }
 }
