@@ -105,6 +105,7 @@ function displayComment(response) {
         actualComment.innerText = response.data[i].comment;
         actualComment.classList.add('comments-added__body');
         divContainer.appendChild(actualComment);
+
 }
 }
 
@@ -249,15 +250,16 @@ const comments = document.querySelector(".comments-added");
 
 
 // ----- below posted to database but form didnt update--------
-//  axios({
-//      method: "post",
-//     url: "https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b",
-//     data: {
-//         name: "siar",
-//         comment: formComment,
-//     }
-//  }).then(() => {
-    
+//   axios({
+//       method: "post",
+//      url: "https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b",
+//      data: {
+//          name: e.target.name.value,
+//          comment: e.target.comment.value,
+//      }
+//   }).then((response) => {
+//       console.log(response)
+//   });
 //     mainForm.addEventListener('submit', (e) => {
 //         e.preventDefault();
     
@@ -268,3 +270,83 @@ const comments = document.querySelector(".comments-added");
 
 // --------------Trying to add comments form straight to db-------------
 
+// mainForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     axios.post('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b', 
+//     {
+//         name: e.target.name.value,
+//         comment: e.target.comment.value
+//     }).then(response => {
+        // this gives me an object of what I just POST
+        // console.log(response);
+
+        // displayComment(response);
+
+        //const comments = document.querySelector(".comments-added");
+
+            //  this is the main container
+            //   const divContainer = document.createElement('div');
+            //   divContainer.classList.add('comments-added__section');
+            //   comments.appendChild(divContainer);
+
+            // trying div for name and date
+            //   const flexDiv = document.createElement('div');
+            //   flexDiv.classList.add('comments__div');
+            //   divContainer.appendChild(flexDiv);
+
+             // image of avatar
+            //   const image = document.createElement('img');
+            //   image.classList.add('comments-added__avatar');
+            //   flexDiv.appendChild(image);
+
+            // name
+            //   const name = document.createElement('p');
+            //   name.innerText = e.target.name.value;
+            //   name.classList.add('comments-added__name');
+            //   flexDiv.appendChild(name);
+
+            // date/time
+            //   const time = document.createElement('p');
+            //   time.innerText = response.data.timestamp;
+            //   time.classList.add('comments-added__date');
+            //   flexDiv.appendChild(time);
+
+            //   divContainer.appendChild(flexDiv);
+
+            // comment body
+            //   const actualComment = document.createElement('p');
+            //   actualComment.innerText = e.target.comment.value;
+            //   actualComment.classList.add('comments-added__body');
+            //   divContainer.appendChild(actualComment);
+
+            //   comments.appendChild(divContainer);
+            //   comments.insertBefore(divContainer, comments.childNodes[0]);
+
+//     })
+
+
+// })
+
+
+mainForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    axios.post('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b',
+    {
+        name: e.target.name.value,
+        comment: e.target.comment.value
+    })
+    .then(() => {
+        axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b')
+        .then(response => {
+            console.log(response)
+            response.data.sort((x, y) => {
+                return y.timestamp - x.timestamp
+            })
+        })
+    })
+    document.getElementById('mainForm').reset();
+})
+
+    
