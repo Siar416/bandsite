@@ -63,6 +63,8 @@ axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4
             // actualComment.classList.add('comments-added__body');
             // divContainer.appendChild(actualComment);
             // }
+}).catch(err => {
+    console.log("Sorry, we weren't able to retrieve comments...");
 })
 
 
@@ -164,75 +166,105 @@ const comments = document.querySelector(".comments-added");
         const newDate = date.toLocaleDateString('en-US');
         const mainForm = document.getElementById('mainForm');
 
-        /////// form submit
-        mainForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        // -----------Below will need to be changed to POST method-----
+        ///// form submit
+        // mainForm.addEventListener('submit', (e) => {
+        // e.preventDefault();
 
-        const formName = e.target.name.value;
-        const formComment = e.target.comment.value;
-        const formTime = newDate;
-        const comments = document.querySelector(".comments-added");
+        // const formName = e.target.name.value;
+        // const formComment = e.target.comment.value;
+        // const formTime = newDate;
+        // const comments = document.querySelector(".comments-added");
 
-        if(formName && formComment !== "") {
+        // if(formName && formComment !== "") {
     
             // this is the main container
-            const divContainer = document.createElement('div');
-            divContainer.classList.add('comments-added__section');
-            comments.appendChild(divContainer);
+            // const divContainer = document.createElement('div');
+            // divContainer.classList.add('comments-added__section');
+            // comments.appendChild(divContainer);
 
-            //trying div for name and date
-            const flexDiv = document.createElement('div');
-            flexDiv.classList.add('comments__div');
-            divContainer.appendChild(flexDiv);
+            // trying div for name and date
+            // const flexDiv = document.createElement('div');
+            // flexDiv.classList.add('comments__div');
+            // divContainer.appendChild(flexDiv);
 
             // image of avatar
-            const image = document.createElement('img');
-            image.classList.add('comments-added__avatar');
-            flexDiv.appendChild(image);
+            // const image = document.createElement('img');
+            // image.classList.add('comments-added__avatar');
+            // flexDiv.appendChild(image);
 
             // name
-            const name = document.createElement('p');
-            name.innerText = formName;
-            name.classList.add('comments-added__name');
-            flexDiv.appendChild(name);
+            // const name = document.createElement('p');
+            // name.innerText = formName;
+            // name.classList.add('comments-added__name');
+            // flexDiv.appendChild(name);
 
 
             // date/time
-            const time = document.createElement('p');
-            time.innerText = formTime;
-            time.classList.add('comments-added__date');
-            flexDiv.appendChild(time);
+            // const time = document.createElement('p');
+            // time.innerText = formTime;
+            // time.classList.add('comments-added__date');
+            // flexDiv.appendChild(time);
 
-            divContainer.appendChild(flexDiv);
+            // divContainer.appendChild(flexDiv);
 
  
             // comment body
-            const actualComment = document.createElement('p');
-            actualComment.innerText = formComment;
-            actualComment.classList.add('comments-added__body');
-            divContainer.appendChild(actualComment);
+//             const actualComment = document.createElement('p');
+//             actualComment.innerText = formComment;
+//             actualComment.classList.add('comments-added__body');
+//             divContainer.appendChild(actualComment);
     
     
-            comments.appendChild(divContainer);
-            comments.insertBefore(divContainer, comments.childNodes[0]);
+//             comments.appendChild(divContainer);
+//             comments.insertBefore(divContainer, comments.childNodes[0]);
    
-    }       
-formValidation(e);
+//     }       
+// formValidation(e);
 
-});
+// });
 
 // simple form validation
-function formValidation(e) {
-    const nameValidation = document.getElementById('nameValidate');
-    const commentValidation = document.getElementById('commentValidate');
-    if(nameValidation.value === '') {
-        nameValidation.style.borderColor = '#d22d2d';
-    }
-    if(commentValidation.value === '') {
-        commentValidation.style.borderColor = '#d22d2d';
-    } 
-    else {
-        e.target.name.value = '';
-        e.target.comment.value = '';
-    }
-}
+// function formValidation(e) {
+//     const nameValidation = document.getElementById('nameValidate');
+//     const commentValidation = document.getElementById('commentValidate');
+//     if(nameValidation.value === '') {
+//         nameValidation.style.borderColor = '#d22d2d';
+//     }
+//     if(commentValidation.value === '') {
+//         commentValidation.style.borderColor = '#d22d2d';
+//     } 
+//     else {
+//         e.target.name.value = '';
+//         e.target.comment.value = '';
+//     }
+// }
+
+
+
+// ------ Below is posting new comments using POST method-----
+
+
+
+
+
+// ----- below posted to database but form didnt update--------
+//  axios({
+//      method: "post",
+//     url: "https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b",
+//     data: {
+//         name: "siar",
+//         comment: formComment,
+//     }
+//  }).then(() => {
+    
+//     mainForm.addEventListener('submit', (e) => {
+//         e.preventDefault();
+    
+//         formName = e.target.name.value;
+//         formComment = e.target.comment.value;
+//     });
+//  })
+
+// --------------Trying to add comments form straight to db-------------
+
