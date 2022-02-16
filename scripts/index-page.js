@@ -23,56 +23,54 @@ const api_key = '44207bb3-693f-4332-bf44-81855a3f337b';
 
 axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b')
 .then(response => {
+    displayComment(response)
     // console.log(response.data);
 
-            for(let i = 0; i < response.data.length; i++) {
+            // for(let i = 0; i < response.data.length; i++) {
                 // console.log(response.data[i]);
 
             // this is the main container
-            const divContainer = document.createElement('div');
-            divContainer.classList.add('comments-added__section');
-            comments.appendChild(divContainer);
+            // const divContainer = document.createElement('div');
+            // divContainer.classList.add('comments-added__section');
+            // comments.appendChild(divContainer);
 
             //trying div for name and date
-            const flexDiv = document.createElement('div');
-            flexDiv.classList.add('comments__div');
-            divContainer.appendChild(flexDiv);
+            // const flexDiv = document.createElement('div');
+            // flexDiv.classList.add('comments__div');
+            // divContainer.appendChild(flexDiv);
 
             // image of avatar
-            const image = document.createElement('img');
-            image.classList.add('comments-added__avatar');
-            flexDiv.appendChild(image);
+            // const image = document.createElement('img');
+            // image.classList.add('comments-added__avatar');
+            // flexDiv.appendChild(image);
 
             // name
-            const name = document.createElement('p');
-            name.innerText = response.data[i].name;
-            name.classList.add('comments-added__name');
-            flexDiv.appendChild(name);
+            // const name = document.createElement('p');
+            // name.innerText = response.data[i].name;
+            // name.classList.add('comments-added__name');
+            // flexDiv.appendChild(name);
 
             // date/time
-            const time = document.createElement('p');
-            time.innerText = response.data[i].timestamp;
-            time.classList.add('comments-added__date');
-            flexDiv.appendChild(time);
+            // const time = document.createElement('p');
+            // time.innerText = response.data[i].timestamp;
+            // time.innerText = new Date(response.data[i].timestamp).toLocaleDateString();
+            // time.classList.add('comments-added__date');
+            // flexDiv.appendChild(time);
 
             // comment body
-            const actualComment = document.createElement('p');
-            actualComment.innerText = response.data[i].comment;
-            actualComment.classList.add('comments-added__body');
-            divContainer.appendChild(actualComment);
-
-
-
-            }
+            // const actualComment = document.createElement('p');
+            // actualComment.innerText = response.data[i].comment;
+            // actualComment.classList.add('comments-added__body');
+            // divContainer.appendChild(actualComment);
+            // }
 })
 
 
-const comments = document.querySelector(".comments-added");
 
-    function displayComment() {
+// trying to store comment populating into function instead
+function displayComment(response) {
+    for(let i = 0; i < response.data.length; i++) {
 
-        for(const key in commentArray) {
-        
         // this is the main container
         const divContainer = document.createElement('div');
         divContainer.classList.add('comments-added__section');
@@ -87,31 +85,79 @@ const comments = document.querySelector(".comments-added");
         const image = document.createElement('img');
         image.classList.add('comments-added__avatar');
         flexDiv.appendChild(image);
-  
-       // name
+
+        // name
         const name = document.createElement('p');
-        name.innerText = commentArray[key].name;
+        name.innerText = response.data[i].name;
         name.classList.add('comments-added__name');
         flexDiv.appendChild(name);
-    
+
         // date/time
         const time = document.createElement('p');
-        time.innerText = commentArray[key].time;
+        time.innerText = new Date(response.data[i].timestamp).toLocaleDateString();
         time.classList.add('comments-added__date');
         flexDiv.appendChild(time);
 
         // comment body
         const actualComment = document.createElement('p');
-        actualComment.innerText = commentArray[key].comment;
+        actualComment.innerText = response.data[i].comment;
         actualComment.classList.add('comments-added__body');
         divContainer.appendChild(actualComment);
+}
+}
+
+
+
+
+
+
+
+const comments = document.querySelector(".comments-added");
+
+// ---- this is now being pulled from database ------
+    // function displayComment() {
+
+    //     for(const key in commentArray) {
+        
+    //     // this is the main container
+    //     const divContainer = document.createElement('div');
+    //     divContainer.classList.add('comments-added__section');
+    //     comments.appendChild(divContainer);
+
+    //     //trying div for name and date
+    //     const flexDiv = document.createElement('div');
+    //     flexDiv.classList.add('comments__div');
+    //     divContainer.appendChild(flexDiv);
+
+    //     // image of avatar
+    //     const image = document.createElement('img');
+    //     image.classList.add('comments-added__avatar');
+    //     flexDiv.appendChild(image);
+  
+    //    // name
+    //     const name = document.createElement('p');
+    //     name.innerText = commentArray[key].name;
+    //     name.classList.add('comments-added__name');
+    //     flexDiv.appendChild(name);
     
-        comments.appendChild(divContainer);
+    //     // date/time
+    //     const time = document.createElement('p');
+    //     time.innerText = commentArray[key].time;
+    //     time.classList.add('comments-added__date');
+    //     flexDiv.appendChild(time);
+
+    //     // comment body
+    //     const actualComment = document.createElement('p');
+    //     actualComment.innerText = commentArray[key].comment;
+    //     actualComment.classList.add('comments-added__body');
+    //     divContainer.appendChild(actualComment);
     
-        }
-    }
-    // ------commented out function so doesnt run-----
-        // displayComment();
+    //     comments.appendChild(divContainer);
+    
+    //     }
+    // }
+  
+    //     displayComment();
 
         // shorten date
         const date = new Date();
