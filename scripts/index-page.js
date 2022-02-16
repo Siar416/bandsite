@@ -45,19 +45,19 @@ axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4
 
             // name
             const name = document.createElement('p');
-            name.innerText = response.data[0].name;
+            name.innerText = response.data[i].name;
             name.classList.add('comments-added__name');
             flexDiv.appendChild(name);
 
             // date/time
             const time = document.createElement('p');
-            time.innerText = response.data[0].timestamp;
+            time.innerText = response.data[i].timestamp;
             time.classList.add('comments-added__date');
             flexDiv.appendChild(time);
 
             // comment body
             const actualComment = document.createElement('p');
-            actualComment.innerText = response.data[0].comment;
+            actualComment.innerText = response.data[i].comment;
             actualComment.classList.add('comments-added__body');
             divContainer.appendChild(actualComment);
 
