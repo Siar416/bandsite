@@ -71,6 +71,16 @@ axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4
 
 // trying to store comment populating into function instead
 function displayComment(response) {
+
+        // sorting response
+        response.data.sort((x, y) => {
+        return y.timestamp - x.timestamp
+     })
+
+        // set the comments section to empty string
+        const comments = document.querySelector(".comments-added");
+        comments.innerText = '';
+
     for(let i = 0; i < response.data.length; i++) {
 
         // this is the main container
@@ -108,14 +118,6 @@ function displayComment(response) {
 
 }
 }
-
-
-
-
-
-
-
-const comments = document.querySelector(".comments-added");
 
 // ---- this is now being pulled from database ------
     // function displayComment() {
@@ -340,13 +342,13 @@ mainForm.addEventListener("submit", (e) => {
     .then(() => {
         axios.get('https://project-1-api.herokuapp.com/comments/?api_key=44207bb3-693f-4332-bf44-81855a3f337b')
         .then(response => {
-            console.log(response)
-            response.data.sort((x, y) => {
-                return y.timestamp - x.timestamp
-            })
+            displayComment(response)
         })
     })
+
+    // reset the form 
     document.getElementById('mainForm').reset();
-})
+});
+    
 
     
