@@ -165,8 +165,8 @@ function displayComment(response) {
     //     displayComment();
 
         // shorten date
-        const date = new Date();
-        const newDate = date.toLocaleDateString('en-US');
+        // const date = new Date();
+        // const newDate = date.toLocaleDateString('en-US');
         const mainForm = document.getElementById('mainForm');
 
         // -----------Below will need to be changed to POST method-----
