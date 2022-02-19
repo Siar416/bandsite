@@ -260,9 +260,9 @@
         background-color: $alabaster;
       }
 
-      // &:active {
-      //   background-color: $mercury;
-      // }
+      &:active {
+        background-color: $mercury;
+      }
     }
   }
 
@@ -306,5 +306,23 @@
 }
 
 .active {
-  background-color: $mercury;
+  @include desktop-screen {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $mercury;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    padding: 0 1.5rem;
+    background-color: $mercury;
+  }
+
+  @include tablet-screen {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid $mercury;
+    align-items: center;
+    align-items: flex-end;
+    background-color: $mercury;
+  }
 }

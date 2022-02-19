@@ -472,6 +472,9 @@ table {
   .shows__container:hover {
     background-color: #fafafa;
   }
+  .shows__container:active {
+    background-color: #e1e1e1;
+  }
 }
 @media screen and (min-width: 1280px) {
   .shows {
@@ -519,6 +522,25 @@ table {
   }
 }
 
-.active {
-  background-color: #e1e1e1;
+@media screen and (min-width: 1280px) {
+  .active {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid #e1e1e1;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    padding: 0 1.5rem;
+    background-color: #e1e1e1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .active {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid #e1e1e1;
+    align-items: center;
+    align-items: flex-end;
+    background-color: #e1e1e1;
+  }
 }/*# sourceMappingURL=shows.css.map */
