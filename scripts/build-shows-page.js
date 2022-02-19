@@ -220,7 +220,7 @@ function displayShows(response) {
                 const showsListDate = document.createElement('li');
                 showsListDate.classList.add('shows__list__date__text');
                 // showsListDate.innerText = array[key].date;
-                showsListDate.innerText = response.data[key].date
+                showsListDate.innerText = new Date(Number(response.data[key].date)).toDateString();
               
                 showsUlOne.appendChild(showsListDate);
     
@@ -317,7 +317,7 @@ function displayShows(response) {
                 const showsListDate = document.createElement('li');
                 showsListDate.classList.add('shows__list__date__text');
                 // showsListDate.innerText = array[key].date;
-                showsListDate.innerText = response.data[key].date;
+                showsListDate.innerText = new Date(Number(response.data[key].date)).toDateString();
     
                 const showsVenueList = document.createElement('li');
                 showsVenueList.classList.add('shows__list__venue__text');
@@ -340,6 +340,6 @@ function displayShows(response) {
 
 axios.get('https://project-1-api.herokuapp.com/showdates/?api_key=44207bb3-693f-4332-bf44-81855a3f337b')
 .then(response => {
-    console.log(response.data)
+    console.log(response);
     displayShows(response);
 })
