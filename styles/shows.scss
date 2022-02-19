@@ -231,6 +231,14 @@
       border-bottom: 0.0625rem solid $mercury;
       align-items: center;
       align-items: flex-end;
+
+      &:hover {
+        background-color: $alabaster;
+      }
+
+      &:active {
+        background-color: $mercury;
+      }
     }
   }
 
@@ -252,9 +260,9 @@
         background-color: $alabaster;
       }
 
-      &:active {
-        background-color: $mercury;
-      }
+      // &:active {
+      //   background-color: $mercury;
+      // }
     }
   }
 
@@ -295,4 +303,8 @@
       background-color: $drk-black;
     }
   }
+}
+
+.active {
+  background-color: $mercury;
 }

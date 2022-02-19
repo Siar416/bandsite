@@ -14,13 +14,23 @@ function displayShows(response) {
     for (const key in response.data) {
     
         if (counter !== 0) {
+
+            document.querySelectorAll('.shows__container').forEach(item => {
+                item.addEventListener('click', () => {
+                    console.log('clicked')
+                })
+            })
+
+
+
+
                 const shows = document.createElement('section');
                 shows.classList.add('shows');
                 showsWrapper.appendChild(shows);
     
                 // shows container
                 const showsContainer = document.createElement('div');
-                showsContainer.classList.add('shows__container');
+                showsContainer.classList.toggle('shows__container', 'active');
                 shows.appendChild(showsContainer);
     
                 // ul
@@ -88,7 +98,7 @@ function displayShows(response) {
     
                 //container
                 const showsContainer = document.createElement('div');
-                showsContainer.classList.add('shows__container');
+                showsContainer.classList.toggle('shows__container', 'active');
                 shows.appendChild(showsContainer)
     
                 // =========== DATE======================
@@ -156,3 +166,6 @@ axios.get(showsUrl+apiKey)
 .catch(err => {
     console.log('Sorry, unable to retrieve data');
 })
+
+
+
