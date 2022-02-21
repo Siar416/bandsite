@@ -66,10 +66,6 @@
     border-bottom: 0.1875rem solid $white;
   }
 
-  &__links--active:hover {
-    color: $white;
-  }
-
   @include tablet-screen {
     justify-content: space-around;
     width: 40%;
@@ -82,10 +78,6 @@
 
     &__section--active:hover {
       border-bottom: 0.3125rem solid $white;
-    }
-
-    &__links--active:hover {
-      color: $white;
     }
   }
 
@@ -101,10 +93,6 @@
 
     &__section--active:hover {
       border-bottom: 0.3125rem solid $white;
-    }
-
-    &__links--active:hover {
-      color: $white;
     }
   }
 

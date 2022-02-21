@@ -211,9 +211,6 @@ table {
 .navbar__section--active:hover {
   border-bottom: 0.1875rem solid #ffffff;
 }
-.navbar__links--active:hover {
-  color: #ffffff;
-}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .navbar {
     justify-content: space-around;
@@ -226,9 +223,6 @@ table {
   }
   .navbar__section--active:hover {
     border-bottom: 0.3125rem solid #ffffff;
-  }
-  .navbar__links--active:hover {
-    color: #ffffff;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -243,9 +237,6 @@ table {
   }
   .navbar__section--active:hover {
     border-bottom: 0.3125rem solid #ffffff;
-  }
-  .navbar__links--active:hover {
-    color: #ffffff;
   }
 }
 .navbar__links {

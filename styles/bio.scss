@@ -269,7 +269,6 @@
 }
 
 // comments section started - mobile
-
 @include mobile-screen {
   .comments {
     background-color: $white;
@@ -395,7 +394,6 @@
 }
 
 // comments section started - tablet
-
 @include tablet-screen {
   .comments {
     background-color: $white;
